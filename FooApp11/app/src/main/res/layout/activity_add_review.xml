@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/hamburger"
+    tools:context=".MainActivity">
+
+    <!--Edittext for getting course Name-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/darkBlue"
+        >
+
+    <!--Edittext for getting course Duration-->
+    <EditText
+        android:id="@+id/review"
+        android:layout_width="match_parent"
+        android:layout_height="300sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Enter your Review"
+        android:importantForAutofill="no"
+        android:inputType="time"
+        android:textSize="22sp"
+        />
+
+    <!--Edittext for getting course Description-->
+
+    <!--Button for adding your course to Firebase-->
+    <Button
+        android:id="@+id/idBtnSubmitCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/add_review"
+        android:textAllCaps="false"
+        android:textSize="22sp"
+        />
+
+    <!--Button for showing the list of added courses-->
+    <Button
+        android:id="@+id/idBtnViewCourses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/back_btn"
+        android:textAllCaps="false"
+        android:textSize="22sp"
+        />
+
+    </LinearLayout>
+
+</LinearLayout>
