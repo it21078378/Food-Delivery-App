@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">FooApp11</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="food_name">Hamburger</string>
     <string name="food_description">A hamburger is a sandwich consisting of a cooked meat patty on a bun or roll.</string>
@@ -12,7 +11,7 @@
     <string name="total_value">3600</string>
     <string name="remove_btn">Remove</string>
     <string name="back_btn">Back</string>
-    <string name="add_review">Add Review</string>
+    <string name="add_review">ADD REVIEW</string>
     <string name="slogan">We would love to be trusted by every food lover in the town.</string>
     <string name="name">Yummy</string>
     <string name="register">Register</string>
@@ -27,4 +26,30 @@
     <string name="current_user">Already have an account?</string>
     <string name="re_password">Confirm Password</string>
     <string name="re_password_placeholder">Enter your password again</string>
+    <string name="ordered_foods">Ordered Foods</string>
+    <string name="payment_details">PAYMENT DETAILS</string>
+    <string name="address_details">ADDRESS DETAILS</string>
+    <string name="review">Review</string>
+    <string name="customer_login">CUSTOMER LOGIN</string>
+    <string name="admin_login">ADMIN LOGIN</string>
+    <string name="enter_review">Enter your Review</string>
+    <string name="home">HOME</string>
+    <string name="cart">CART</string>
+    <string name="account">ACCOUNT</string>
+    <string name="category_text">Category Text</string>
+    
+
+
+
+
+    <string name="add_product">ADD PRODUCT</string>
+    <string name="edit_product">EDIT PRODUCT</string>
+    <string name="delete_product">DELETE PRODUCT</string>
+    <string name="notification_history">Notification History</string>
+    <string name="settings">Settings</string>
+    <string name="enable_notifications">Enable Notifications</string>
+    <string name="notification_period">Notification Period</string>
+    <string name="btn_update">UPDATE</string>
+
+
 </resources>

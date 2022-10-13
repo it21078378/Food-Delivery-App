@@ -25,7 +25,7 @@
             android:layout_height="100dp"
             android:layout_weight=".33"
             android:onClick="changeFragment"
-            android:text="Home" />
+            android:text="@string/home" />
 
         <Button
             android:id="@+id/btnFragment2"
@@ -33,7 +33,7 @@
             android:layout_height="100dp"
             android:layout_weight=".33"
             android:onClick="changeFragment"
-            android:text="Cart" />
+            android:text="@string/cart" />
 
         <Button
             android:id="@+id/btnFragment3"
@@ -41,7 +41,7 @@
             android:layout_height="100dp"
             android:layout_weight=".33"
             android:onClick="changeFragment"
-            android:text="Account"
+            android:text="@string/account"
             />
 
     </LinearLayout>

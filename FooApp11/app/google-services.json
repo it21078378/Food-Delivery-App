@@ -7,38 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:867686263641:android:6864a71e7b1b6d8df37a48",
+        "mobilesdk_app_id": "1:867686263641:android:59991bd17d09a667f37a48",
         "android_client_info": {
           "package_name": "com.example.fooapp11"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "867686263641-o6g7kf13c00o0d8u3g031ejhr8m2lm3u.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCBWnLk0QduBGlOVsIib0EGIBk_2j1wJwk"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "867686263641-o6g7kf13c00o0d8u3g031ejhr8m2lm3u.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:867686263641:android:3716dc45f0aae820f37a48",
-        "android_client_info": {
-          "package_name": "com.example.studmuffinsfoodorderapp"
         }
       },
       "oauth_client": [

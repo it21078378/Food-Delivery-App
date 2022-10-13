@@ -6,11 +6,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/darkBlue"
+    android:padding="20sp"
     tools:context=".SingleFood">
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="300dp"
         android:layout_gravity="center"
         android:layout_marginRight="50dp"
         android:layout_marginLeft="50dp"
@@ -47,7 +48,7 @@
             android:layout_toEndOf="@id/image"
             android:padding="3dp"
             android:text="@string/food_description"
-            android:justificationMode="inter_word"
+
             android:textColor="@color/darkBlue"
             android:textStyle="bold"
             android:textSize="20sp"
@@ -167,6 +168,8 @@
             android:layout_height="wrap_content"
             android:text="@string/remove_btn"
             android:textStyle="bold"
+            android:layout_marginRight="10sp"
+            android:layout_marginLeft="10sp"
             android:textColor="@color/darkBgFontColor"
             android:textSize="20sp"
             />
@@ -176,6 +179,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/back_btn"
+            android:layout_marginRight="10sp"
+            android:layout_marginLeft="10sp"
             android:textStyle="bold"
             android:textColor="@color/darkBgFontColor"
             android:textSize="20sp"
