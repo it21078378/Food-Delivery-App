@@ -50,6 +50,8 @@
     <string name="enable_notifications">Enable Notifications</string>
     <string name="notification_period">Notification Period</string>
     <string name="btn_update">UPDATE</string>
+    <string name="email">Email</string>
+    <string name="email_placeholder">Enter your email</string>
 
 
 </resources>
