@@ -16,46 +16,41 @@
         android:theme="@style/Theme.FooApp11"
         tools:targetApi="31">
         <activity
+            android:name=".AddProduct"
+            android:exported="false" />
+        <activity
             android:name=".ChooseLoginActivity"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".RegisterActivity"
-            android:exported="true" >
-
-        </activity>
-
+            android:exported="true"></activity>
         <activity
             android:name=".LoginActivity"
-            android:exported="true" >
-
-
-
-        </activity>
-
+            android:exported="true"></activity>
         <activity
             android:name=".WelcomeActivity"
-            android:exported="true" >
+            android:exported="true">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
         <activity
             android:name=".ReviewDetails"
-            android:exported="true"/>
+            android:exported="true" >
+
+
+        </activity>
         <activity
             android:name=".AddReviewActivity"
-            android:exported="true" />
-        <activity
-            android:name=".SingleFood"
             android:exported="true" >
 
         </activity>
+        <activity
+            android:name=".SingleFood"
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">

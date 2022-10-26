@@ -16,7 +16,20 @@
         android:background="@color/darkBlue"
         >
 
-    <!--Edittext for getting course Duration-->
+        <EditText
+            android:id="@+id/name"
+            android:layout_marginTop="100sp"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:hint="@string/name_placeholder"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            />
+
+
     <EditText
         android:id="@+id/review"
         android:layout_width="match_parent"
@@ -27,16 +40,14 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:hint="@string/enter_review"
-        android:importantForAutofill="no"
-        android:inputType="time"
         android:textSize="22sp"
         />
 
-    <!--Edittext for getting course Description-->
+
 
     <!--Button for adding your course to Firebase-->
     <Button
-        android:id="@+id/idBtnSubmitCourse"
+        android:id="@+id/idBtnSubmitReview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -47,7 +58,7 @@
 
     <!--Button for showing the list of added courses-->
     <Button
-        android:id="@+id/idBtnViewCourses"
+        android:id="@+id/idBtnViewReviews"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"

@@ -4,12 +4,16 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fooapp11.adapters.ProductAdapter;
@@ -32,6 +36,8 @@ public class HomeFragment extends Fragment {
     FirebaseFirestore db;
     private FirebaseAuth mAuth;
 
+    Button add;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,12 +45,15 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         mAuth = FirebaseAuth.getInstance();
         View contentView = inflater.inflate(R.layout.fragment_home, container, false);
-        productsLV = contentView.findViewById(R.id.products);
+        productsLV = (ListView)contentView.findViewById(R.id.products);
         productModalArrayList = new ArrayList<>();
         db = FirebaseFirestore.getInstance();
         loadDatainListview();
+
         return contentView;
     }
+
+
 
     private void loadDatainListview() {
         db.collection("Products").get()
@@ -73,6 +82,8 @@ public class HomeFragment extends Fragment {
                             // after passing this array list to our adapter
                             // class we are setting our adapter to our list view.
                             productsLV.setAdapter(adapter);
+
+
                         } else {
                             // if the snapshot is empty we are displaying a toast message.
                             Toast.makeText(getContext(), "No data found in Database", Toast.LENGTH_SHORT).show();

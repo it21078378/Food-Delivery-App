@@ -48,7 +48,7 @@ public class CartFragment extends Fragment {
     }
 
     private void loadDatainListview() {
-        db.collection("Data").get()
+        db.collection("Cart").get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {

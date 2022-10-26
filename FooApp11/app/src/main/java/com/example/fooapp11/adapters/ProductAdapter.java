@@ -1,6 +1,8 @@
 package com.example.fooapp11.adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.fooapp11.R;
+import com.example.fooapp11.SingleFood;
 import com.example.fooapp11.model.Product;
 import com.squareup.picasso.Picasso;
 
@@ -47,7 +50,7 @@ public class ProductAdapter extends ArrayAdapter<Product> {
         // after initializing our items we are
         // setting data to our view.
         // below line is use to set data to our text view.
-        title.setText(dataModal.getName());
+        title.setText(dataModal.getPtitle());
 
         // in below line we are using Picasso to
         // load image from URL in our Image VIew.
@@ -61,7 +64,26 @@ public class ProductAdapter extends ArrayAdapter<Product> {
             public void onClick(View v) {
                 // on the item click on our list view.
                 // we are displaying a toast message.
-                Toast.makeText(getContext(), "Item clicked is : " + dataModal.getName(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Item clicked is : " + dataModal.getPtitle(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getContext(), SingleFood.class);
+                String ptitle = dataModal.getPtitle();
+                int pamount= dataModal.getPamount();
+                String imgUrl= dataModal.getImgUrl();
+                String pdescription = dataModal.getPdescription();
+
+                //Create the bundle
+                Bundle bundle = new Bundle();
+
+                //Add data to the bundle
+                bundle.putString("title", ptitle);
+                bundle.putInt("amount", pamount);
+                bundle.putString("description", pdescription);
+                bundle.putString("imgUrl", imgUrl);
+
+                //Add the bundle to the intent
+                intent.putExtras(bundle);
+                v.getContext().startActivity(intent);
+
             }
         });
         return listitemView;

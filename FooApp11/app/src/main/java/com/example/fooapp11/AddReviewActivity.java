@@ -21,14 +21,14 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class AddReviewActivity extends AppCompatActivity {
 
     // creating variables for our edit text
-    private EditText usernameEditText, reviewEditText;
+    private EditText nameEditText, reviewEditText;
 
     // creating variable for button
-    private Button submitCourseBtn, viewCoursesBtn;
+    private Button submitReviewBtn, viewReviewsBtn, idBtnViewReviews;
 
     // creating a strings for storing
     // our values from edittext fields.
-    private String username, review;
+    private String name, review;
 
     // creating a variable
     // for firebasefirestore.
@@ -44,14 +44,15 @@ public class AddReviewActivity extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
 
         // initializing our edittext and buttons
-        usernameEditText = findViewById(R.id.username);
+
+        nameEditText = findViewById(R.id.name);
         reviewEditText = findViewById(R.id.review);
 
-        submitCourseBtn = findViewById(R.id.idBtnSubmitCourse);
-        viewCoursesBtn = findViewById(R.id.idBtnViewCourses);
-
+        submitReviewBtn = findViewById(R.id.idBtnSubmitReview);
+        viewReviewsBtn = findViewById(R.id.idBtnViewReviews);
+        idBtnViewReviews = findViewById(R.id.idBtnViewReviews);
         // adding onclick listener to view data in new activity
-        viewCoursesBtn.setOnClickListener(new View.OnClickListener() {
+        viewReviewsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // opening a new activity on button click
@@ -61,52 +62,59 @@ public class AddReviewActivity extends AppCompatActivity {
         });
 
         // adding on click listener for button
-        submitCourseBtn.setOnClickListener(new View.OnClickListener() {
+        submitReviewBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 // getting data from edittext fields.
-                username = usernameEditText.getText().toString();
+                name = nameEditText.getText().toString();
                 review = reviewEditText.getText().toString();
 
 
                 // validating the text fields if empty or not.
-                if (TextUtils.isEmpty(username)) {
-                    usernameEditText.setError("Please enter User Name");
-                } else if (TextUtils.isEmpty(review)) {
+                if (TextUtils.isEmpty(review)) {
                     reviewEditText.setError("Please enter Review");
 
                 } else {
                     // calling method to add data to Firebase Firestore.
-                    addDataToFirestore(username, review);
+                    addDataToFirestore(name, review);
                 }
             }
         });
+
+        idBtnViewReviews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AddReviewActivity.this, ReviewDetails.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
-    private void addDataToFirestore(String username, String review) {
+    private void addDataToFirestore(String name, String review) {
 
         // creating a collection reference
         // for our Firebase Firetore database.
-        CollectionReference dbCourses = db.collection("Courses");
+        CollectionReference dbReviews = db.collection("Reviews");
 
         // adding our data to our courses object class.
-        Review courses = new Review(username, review);
+        Review reviews = new Review(name, review);
 
         // below method is use to add data to Firebase Firestore.
-        dbCourses.add(courses).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+        dbReviews.add(reviews).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {
                 // after the data addition is successful
                 // we are displaying a success toast message.
-                Toast.makeText(AddReviewActivity.this, "Your Course has been added to Firebase Firestore", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AddReviewActivity.this, "Your Review has been added", Toast.LENGTH_SHORT).show();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
                 // this method is called when the data addition process is failed.
                 // displaying a toast message when data addition is failed.
-                Toast.makeText(AddReviewActivity.this, "Fail to add course \n" + e, Toast.LENGTH_SHORT).show();
+                Toast.makeText(AddReviewActivity.this, "Fail to add review \n" + e, Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -6,7 +6,7 @@
     <string name="currency">Rs.</string>
     <string name="amount">1200</string>
     <string name="quantity">Quantity</string>
-    <string name="quantity_value">3</string>
+    <string name="quantity_value">1</string>
     <string name="total">Total</string>
     <string name="total_value">3600</string>
     <string name="remove_btn">Remove</string>
@@ -37,9 +37,6 @@
     <string name="cart">CART</string>
     <string name="account">ACCOUNT</string>
     <string name="category_text">Category Text</string>
-    
-
-
 
 
     <string name="add_product">ADD PRODUCT</string>
@@ -52,6 +49,11 @@
     <string name="btn_update">UPDATE</string>
     <string name="email">Email</string>
     <string name="email_placeholder">Enter your email</string>
+    <string name="PID">Product Id</string>
+    <string name="Name">Product Name</string>
+    <string name="PPrice">Product Price</string>
+    <string name="PDes">Product Description</string>
+
 
 
 </resources>
