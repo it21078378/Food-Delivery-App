@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,10 +21,12 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.squareup.picasso.Picasso;
 
 public class SingleFood extends AppCompatActivity {
     Button add, backButton;
     TextView title, description, amount, quantity, total;
+    ImageView image;
     ImageButton increment, decrement;
     String ptitle, imgurl, pdescription;
     int pamount, pquantity, ptotal;
@@ -43,6 +46,7 @@ public class SingleFood extends AppCompatActivity {
         amount = (TextView)findViewById(R.id.amount);
         quantity = (TextView)findViewById(R.id.quantity);
         total = (TextView)findViewById(R.id.total);
+        image = (ImageView)findViewById(R.id.image);
         user = FirebaseAuth.getInstance().getCurrentUser();
         increment = findViewById(R.id.increment);
         decrement = findViewById(R.id.decrement);
@@ -62,6 +66,7 @@ public class SingleFood extends AppCompatActivity {
         amount.setText(String.valueOf(pamount));
         pquantity = 1;
         total.setText(String.valueOf(pquantity*pamount));
+        Picasso.get().load(imgurl).into(image);
 
 
         increment.setOnClickListener(new View.OnClickListener() {

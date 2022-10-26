@@ -14,6 +14,13 @@ public class Product {
         this.pamount = pamount;
     }
 
+    public Product(String name, int price, String description) {
+        this.ptitle = name;
+        this.pamount = price;
+        this.pdescription = description;
+    }
+
+
     public String getPtitle() {
         return ptitle;
     }
