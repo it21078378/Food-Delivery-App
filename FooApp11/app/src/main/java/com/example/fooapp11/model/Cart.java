@@ -1,20 +1,29 @@
 package com.example.fooapp11.model;
 
 public class Cart {
-    private String userId, ptitle, imgUrl;
+    private String userId, ptitle, imgUrl, pdescription;
     private int pamount, pquantity, ptotal;
 
 
     public Cart() {
     }
 
-    public Cart(String userId, String ptitle, int pamount, int pquantity, int ptotal, String imgUrl) {
+    public Cart(String userId, String ptitle, int pamount, int pquantity, int ptotal, String imgUrl, String pdescription) {
         this.userId = userId;
         this.ptitle = ptitle;
         this.imgUrl = imgUrl;
         this.pamount = pamount;
         this.pquantity = pquantity;
         this.ptotal = ptotal;
+        this.pdescription = pdescription;
+    }
+
+    public String getPdescription() {
+        return pdescription;
+    }
+
+    public void setPdescription(String pdescription) {
+        this.pdescription = pdescription;
     }
 
     public String getUserId() {

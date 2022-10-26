@@ -8,12 +8,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.fooapp11.adapters.FoodAdapter;
 
-import com.example.fooapp11.model.Food;
+import com.example.fooapp11.model.Cart;
+
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -27,8 +29,9 @@ import java.util.List;
 public class CartFragment extends Fragment {
 
     ListView coursesLV;
-    ArrayList<Food> dataModalArrayList;
+    ArrayList<Cart> dataModalArrayList;
     FirebaseFirestore db;
+
 
     private FirebaseAuth mAuth;
 
@@ -62,7 +65,7 @@ public class CartFragment extends Fragment {
                             for (DocumentSnapshot d : list) {
                                 // after getting this list we are passing
                                 // that list to our object class.
-                                Food dataModal = d.toObject(Food.class);
+                                Cart dataModal = d.toObject(Cart.class);
 
                                 // after getting data from Firebase we are
                                 // storing that data in our array list

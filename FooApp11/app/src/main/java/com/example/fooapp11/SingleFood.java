@@ -23,9 +23,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class SingleFood extends AppCompatActivity {
     Button add, backButton;
-    TextView title, amount, quantity, total;
+    TextView title, description, amount, quantity, total;
     ImageButton increment, decrement;
-    String ptitle, imgurl;
+    String ptitle, imgurl, pdescription;
     int pamount, pquantity, ptotal;
     FirebaseUser user;
     String userId;
@@ -39,6 +39,7 @@ public class SingleFood extends AppCompatActivity {
         backButton = findViewById(R.id.backButton);
         add = findViewById(R.id.add);
         title = (TextView)findViewById(R.id.title);
+        description = (TextView)findViewById(R.id.description);
         amount = (TextView)findViewById(R.id.amount);
         quantity = (TextView)findViewById(R.id.quantity);
         total = (TextView)findViewById(R.id.total);
@@ -54,11 +55,14 @@ public class SingleFood extends AppCompatActivity {
         ptitle = bundle.getString("title");
         pamount = bundle.getInt("amount");
         imgurl = bundle.getString("imgUrl");
+        pdescription = bundle.getString("description");
 
         title.setText(ptitle);
+        description.setText(pdescription);
         amount.setText(String.valueOf(pamount));
         pquantity = 1;
         total.setText(String.valueOf(pquantity*pamount));
+
 
         increment.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,18 +105,18 @@ public class SingleFood extends AppCompatActivity {
                 pquantity = Integer.parseInt(quantity.getText().toString().trim());
                 ptotal = pamount*pquantity;
                 total.setText(String.valueOf(ptotal));
-                addDataToFirestore(userId, ptitle, pamount, pquantity, ptotal, imgurl);
+                addDataToFirestore(userId, ptitle, pamount, pquantity, ptotal, imgurl, pdescription);
             }
         });
     }
 
-    private void addDataToFirestore(String userId, String ptitle, int pamount, int pquantity, int ptotal, String imgurl) {
+    private void addDataToFirestore(String userId, String ptitle, int pamount, int pquantity, int ptotal, String imgurl, String pdescription) {
         // creating a collection reference
         // for our Firebase Firetore database.
         CollectionReference dbReviews = db.collection("Cart");
 
         // adding our data to our courses object class.
-        Cart cart = new Cart(userId, ptitle, pamount, pquantity, ptotal, imgurl);
+        Cart cart = new Cart(userId, ptitle, pamount, pquantity, ptotal, imgurl, pdescription);
 
         // below method is use to add data to Firebase Firestore.
         dbReviews.add(cart).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
