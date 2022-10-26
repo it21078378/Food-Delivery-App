@@ -53,7 +53,15 @@
     <string name="Name">Product Name</string>
     <string name="PPrice">Product Price</string>
     <string name="PDes">Product Description</string>
-
+    <string name="imgUrl_placeholder">Product Image URL</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="product_id">Product Id:</string>
+    <string name="product_name">Name</string>
+    <string name="price">Price</string>
+    <string name="description">Description</string>
+    <string name="BtnEdit">Edit</string>
+    <string name="BtnDelete">Delete</string>
 
 
 </resources>
