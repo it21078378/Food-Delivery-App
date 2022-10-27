@@ -10,7 +10,10 @@
         <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_order_confirm.xml" value="0.25" />
         <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_product_list.xml" value="0.19583333333333333" />
         <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_register.xml" value="0.15" />
+        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_saved_addresses.xml" value="0.22" />
         <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_single_food.xml" value="0.18" />
+        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/address_item.xml" value="0.1287037037037037" />
+        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/alert_dialog_add_new_address.xml" value="0.1287037037037037" />
         <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/food_item.xml" value="0.15" />
         <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_cart.xml" value="0.1" />
         <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_home.xml" value="0.1" />
@@ -19,6 +22,7 @@
         <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/layout_list.xml" value="0.1" />
         <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/product_item.xml" value="0.19583333333333333" />
         <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/productlist_item.xml" value="0.19583333333333333" />
+        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/view_dialog_confirm_delete.xml" value="0.1287037037037037" />
       </map>
     </option>
   </component>
