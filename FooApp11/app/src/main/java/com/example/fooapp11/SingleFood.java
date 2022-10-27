@@ -70,26 +70,7 @@ public class SingleFood extends AppCompatActivity {
         total.setText(String.valueOf(pquantity*pamount));
         Picasso.get().load(imgurl).into(image);
 
-        buy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                Intent intent = new Intent(SingleFood.this, OrderConfirm.class);
-                //Create the bundle
-                Bundle bundle = new Bundle();
-
-                //Add data to the bundle
-                bundle.putString("title", title.getText().toString());
-                bundle.putString("amount", amount.getText().toString());
-                bundle.putString("description", description.getText().toString());
-                bundle.putString("imgUrl", imgurl);
-                bundle.putString("quantity", quantity.getText().toString());
-                bundle.putString("total", total.getText().toString());
-                //Add the bundle to the intent
-                intent.putExtras(bundle);
-                startActivity(intent);
-            }
-        });
 
 
         increment.setOnClickListener(new View.OnClickListener() {
@@ -134,6 +115,27 @@ public class SingleFood extends AppCompatActivity {
                 ptotal = pamount*pquantity;
                 total.setText(String.valueOf(ptotal));
                 addDataToFirestore(userId, ptitle, pamount, pquantity, ptotal, imgurl, pdescription);
+            }
+        });
+
+        buy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(SingleFood.this, OrderConfirm.class);
+                //Create the bundle
+                Bundle bundle = new Bundle();
+
+                //Add data to the bundle
+                bundle.putString("title", title.getText().toString());
+                bundle.putString("amount", amount.getText().toString());
+                bundle.putString("description", description.getText().toString());
+                bundle.putString("imgUrl", imgurl);
+                bundle.putString("quantity", quantity.getText().toString());
+                bundle.putString("total", total.getText().toString());
+                //Add the bundle to the intent
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
     }

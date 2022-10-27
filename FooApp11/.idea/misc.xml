@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_choose_login.xml" value="0.24739583333333334" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_main.xml" value="0.24739583333333334" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_single_food.xml" value="0.24739583333333334" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_view_products.xml" value="0.24739583333333334" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_home.xml" value="0.24739583333333334" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_my_account.xml" value="0.24739583333333334" />
         <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_add_product.xml" value="0.1" />
         <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_edit_product.xml" value="0.1" />
         <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_login.xml" value="0.1" />
