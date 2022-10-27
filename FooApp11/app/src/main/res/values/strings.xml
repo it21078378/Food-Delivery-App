@@ -64,4 +64,58 @@
     <string name="BtnDelete">Delete</string>
 
 
+    <!--payment -->
+    <string name="order_confirmation">Order Confirmation</string>
+    <string name="count">0</string>
+    <string name="decrease">-</string>
+    <string name="increase">+</string>
+    <string name="text_qunt">Quentity</string>
+    <string name="purchase">next</string>
+    <string name="total_item_cost">Total Item Cost</string>
+    <string name="tic">tic</string>
+    <string name="shiping_cost">Shipping Cost</string>
+    <string name="sc">sc</string>
+    <string name="total_cost">Total Cost</string>
+    <string name="tc">tc</string>
+    <string name="foodItem_img">foodimg</string>
+    <string name="title_activity_card_deatails_form">CardDeatailsForm</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="shipping_address">Shipping Address</string>
+    <string name="address">---</string>
+    <string name="change">Change</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="credit_debit">Credit/ Debit</string>
+    <string name="paypal">PayPal</string>
+    <string name="cardNumber">Card Number</string>
+    <string name="cardHolderName">Card Holder Name</string>
+    <string name="provide_card_deatials_Head">Provide Card Deatials</string>
+    <string name="cvv">CVV</string>
+    <string name="expierDAte">Expier Date</string>
+    <string name="pay_btn">PAY</string>
+    <string name="expierDateIn">12/03</string>
+    <string name="CardNo">xxxx-xxxx-xxxx-xxxx</string>
+    <string name="cvvHint">xxx</string>
+    <string name="nameHint">Ex :- Jhone Whick</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="to_be_review">To be Review</string>
+    <string name="paid">PAID</string>
+    <string name="unpaid">unpaid</string>
+    <string name="pCardName">item Name</string>
+    <string name="pCardPrice">0.00</string>
+    <string name="pCardQty">0</string>
+    <string name="pCardNameHint">"Total Price : "</string>
+    <string name="pCardQtyHint">Quantity</string>
+    <string name="pCardPriceHint">Totl Price</string>
+    <string name="deleteBtn">DELETE</string>
+    <string name="PayBtn">Pay</string>
+    <string name="draftPayment">Pay later</string>
+    <string name="cardDetailsHead">Credit or Debit Card</string>
+
 </resources>

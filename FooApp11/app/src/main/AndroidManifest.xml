@@ -16,23 +16,37 @@
         android:theme="@style/Theme.FooApp11"
         tools:targetApi="31">
         <activity
+            android:name=".UnpaidCardDetails"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentHistory"
+            android:exported="false" />
+        <activity
+            android:name=".unpaid"
+            android:exported="false" />
+        <activity
+            android:name=".paid"
+            android:exported="false" />
+        <activity
+            android:name=".OrderConfirm"
+            android:exported="false" />
+        <activity
+            android:name=".CardDetailsForm"
+            android:exported="false" />
+        <activity
             android:name=".ViewProducts"
-            android:exported="true" >
-
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".EditProduct"
             android:exported="false" />
         <activity
             android:name=".AddProduct"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".ChooseLoginActivity"
@@ -57,9 +71,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

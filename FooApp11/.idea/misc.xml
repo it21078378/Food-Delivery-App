@@ -3,6 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/drawable/rounded.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_add_product.xml" value="0.24739583333333334" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_card_details_form.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_order_confirm.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_paid.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_payment_history.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_unpaid.xml" value="0.14444444444444443" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_unpaid_card_details.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_paid.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_unpaid.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/payment_history_card.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/payment_history_unpaid_card.xml" value="0.264" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/drawable-v24/edit_text_shape.xml" value="0.2025" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/drawable-v24/edit_text_shape2.xml" value="0.166" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/drawable-v24/shape2.xml" value="0.2025" />

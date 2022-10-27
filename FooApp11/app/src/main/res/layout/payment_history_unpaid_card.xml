@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/pUnpaidCardImg"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+            tools:src="@tools:sample/avatars" />
+
+        <TableRow
+            android:id="@+id/pUnpaidCardRoeOne"
+            android:layout_width="301dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/pUnpaidCardImg"
+            android:background="@color/darkBlue">
+
+            <TextView
+                android:id="@+id/pUnpaidCardName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:text="@string/pCardName"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/pCardRowTwo"
+            android:layout_width="301dp"
+            android:layout_height="29dp"
+            android:layout_below="@id/pUnpaidCardRoeOne"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/pUnpaidCardImg"
+            android:background="@color/darkBlue">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:text="@string/pCardQtyHint"
+                android:textColor="@color/white"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/pUnpaidCardQty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:padding="5sp"
+                android:text="@string/pCardQty"
+                android:textColor="@color/white"
+                android:textStyle="normal" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/pCardRowThree"
+            android:layout_width="301dp"
+            android:layout_height="29dp"
+            android:layout_below="@id/pCardRowTwo"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/pUnpaidCardImg"
+            android:background="@color/darkBlue">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:text="@string/pCardPriceHint"
+                android:textColor="@color/white"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/pUnpaidCardPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:padding="5sp"
+                android:text="@string/pCardPrice"
+                android:textColor="@color/white"
+                android:textStyle="normal" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/pCardRowFour"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/pCardRowThree"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/pUnpaidCardImg"
+            android:background="@color/darkBlue">
+
+            <Button
+                android:id="@+id/unpPayBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PayBtn" />
+
+            <Button
+                android:id="@+id/deleteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/deleteBtn" />
+
+
+        </TableRow>
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
