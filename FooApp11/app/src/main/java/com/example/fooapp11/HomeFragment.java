@@ -36,7 +36,7 @@ public class HomeFragment extends Fragment {
     FirebaseFirestore db;
     private FirebaseAuth mAuth;
 
-    Button add;
+    Button add, review;
 
 
     @Override
@@ -49,6 +49,14 @@ public class HomeFragment extends Fragment {
         productModalArrayList = new ArrayList<>();
         db = FirebaseFirestore.getInstance();
         loadDatainListview();
+        review = (Button)contentView.findViewById(R.id.review);
+
+        review.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), ReviewDetails.class));
+            }
+        });
 
         return contentView;
     }

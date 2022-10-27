@@ -27,36 +27,44 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:gravity="center"
-            >
+            android:orientation="vertical">
 
             <Button
+                android:id="@+id/add_payment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="30sp"
+                android:text="@string/add_payment"
                 android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="@string/add_product"
-                android:textStyle="bold"
-                />
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <Button
+                android:id="@+id/edit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:textColor="@color/white"
                 android:text="@string/edit_product"
-                android:textStyle="bold"
-                />
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <Button
+                android:id="@+id/delete"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:textColor="@color/white"
                 android:text="@string/delete_product"
-                android:textStyle="bold"
-                />
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 

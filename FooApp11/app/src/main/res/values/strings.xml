@@ -117,5 +117,8 @@
     <string name="PayBtn">Pay</string>
     <string name="draftPayment">Pay later</string>
     <string name="cardDetailsHead">Credit or Debit Card</string>
+    <string name="add_payment">Add Payment</string>
+    <string name="buy">Buy</string>
+
 
 </resources>

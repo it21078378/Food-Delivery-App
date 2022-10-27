@@ -28,6 +28,7 @@ public class SingleFood extends AppCompatActivity {
     TextView title, description, amount, quantity, total;
     ImageView image;
     ImageButton increment, decrement;
+    Button buy;
     String ptitle, imgurl, pdescription;
     int pamount, pquantity, ptotal;
     FirebaseUser user;
@@ -50,6 +51,7 @@ public class SingleFood extends AppCompatActivity {
         user = FirebaseAuth.getInstance().getCurrentUser();
         increment = findViewById(R.id.increment);
         decrement = findViewById(R.id.decrement);
+        buy = findViewById(R.id.buy);
         userId = user.getUid();
 
         //Get the bundle
@@ -60,13 +62,34 @@ public class SingleFood extends AppCompatActivity {
         pamount = bundle.getInt("amount");
         imgurl = bundle.getString("imgUrl");
         pdescription = bundle.getString("description");
-
+        pquantity = bundle.getInt("quantity");
+        quantity.setText(String.valueOf(pquantity));
         title.setText(ptitle);
         description.setText(pdescription);
         amount.setText(String.valueOf(pamount));
-        pquantity = 1;
         total.setText(String.valueOf(pquantity*pamount));
         Picasso.get().load(imgurl).into(image);
+
+        buy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(SingleFood.this, OrderConfirm.class);
+                //Create the bundle
+                Bundle bundle = new Bundle();
+
+                //Add data to the bundle
+                bundle.putString("title", title.getText().toString());
+                bundle.putString("amount", amount.getText().toString());
+                bundle.putString("description", description.getText().toString());
+                bundle.putString("imgUrl", imgurl);
+                bundle.putString("quantity", quantity.getText().toString());
+                bundle.putString("total", total.getText().toString());
+                //Add the bundle to the intent
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
 
 
         increment.setOnClickListener(new View.OnClickListener() {

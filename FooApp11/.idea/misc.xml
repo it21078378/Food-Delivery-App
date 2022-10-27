@@ -3,70 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/drawable/rounded.xml" value="0.1" />
-        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_add_product.xml" value="0.24739583333333334" />
-        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_card_details_form.xml" value="0.264" />
-        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_order_confirm.xml" value="0.264" />
-        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_paid.xml" value="0.1" />
-        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_payment_history.xml" value="0.264" />
-        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_unpaid.xml" value="0.14444444444444443" />
-        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_unpaid_card_details.xml" value="0.264" />
-        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_paid.xml" value="0.1" />
-        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_unpaid.xml" value="0.1" />
-        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/payment_history_card.xml" value="0.264" />
-        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/payment_history_unpaid_card.xml" value="0.264" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/drawable-v24/edit_text_shape.xml" value="0.2025" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/drawable-v24/edit_text_shape2.xml" value="0.166" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/drawable-v24/shape2.xml" value="0.2025" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/drawable-v24/shape3.xml" value="0.1" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/drawable/close.xml" value="0.166" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/drawable/gradient.xml" value="0.1135" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/drawable/ic_baseline_arrow_drop_up_24.xml" value="0.111" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_add_review.xml" value="0.1" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_choose_login.xml" value="0.2" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_course_details.xml" value="0.1" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_food_details.xml" value="0.16576086956521738" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_notification.xml" value="0.1403985507246377" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_notification_history.xml" value="0.18" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_register.xml" value="0.1331521739130435" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_review.xml" value="0.18" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_review_details.xml" value="0.12" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_settings.xml" value="0.33" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_single_food.xml" value="0.21" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_welcome.xml" value="0.1" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/course_item.xml" value="0.1094017094017094" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/food_item.xml" value="0.22" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/fragment_cart.xml" value="0.1" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/fragment_home.xml" value="0.1" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/fragment_my_account.xml" value="0.22" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/fragment_review.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/layout_food.xml" value="0.1" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/layout_list.xml" value="0.1" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/notification_item.xml" value="0.5" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/product_item.xml" value="0.19895833333333332" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/review_item.xml" value="0.1" />
-        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_add_product.xml" value="0.2" />
-        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_add_review.xml" value="0.19583333333333333" />
-        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_edit_product.xml" value="0.11574074074074074" />
-        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_food_details.xml" value="0.1" />
-        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_login.xml" value="0.2" />
-        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
-        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_register.xml" value="0.2" />
-        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_review_details.xml" value="0.19583333333333333" />
-        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_single_food.xml" value="0.22" />
-        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_view_products.xml" value="0.1796875" />
-        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_welcome.xml" value="0.1" />
-        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/food_item.xml" value="0.2" />
-        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_cart.xml" value="0.1796875" />
-        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_home.xml" value="0.19583333333333333" />
-        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_review.xml" value="0.1796875" />
-        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/layout_food.xml" value="0.2" />
-        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/p_item.xml" value="0.25" />
-        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/product_item.xml" value="0.19583333333333333" />
-        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/productlist_item.xml" value="0.2188679245283019" />
-        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/review_item.xml" value="0.1796875" />
+        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_add_product.xml" value="0.1" />
+        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_edit_product.xml" value="0.1" />
+        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_order_confirm.xml" value="0.25" />
+        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_product_list.xml" value="0.19583333333333333" />
+        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_register.xml" value="0.15" />
+        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_single_food.xml" value="0.18" />
+        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/food_item.xml" value="0.15" />
+        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_cart.xml" value="0.1" />
+        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_my_account.xml" value="0.1" />
+        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/layout_food.xml" value="0.1453125" />
+        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/layout_list.xml" value="0.1" />
+        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/product_item.xml" value="0.19583333333333333" />
+        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/productlist_item.xml" value="0.19583333333333333" />
       </map>
     </option>
   </component>
