@@ -151,7 +151,11 @@ public class paymentUnpaidRV extends FirebaseRecyclerAdapter<UnpaidModel, paymen
     private void sendData(View view) {
         Intent i = new Intent(view.getContext(), UnpaidCardDetails.class);
 
-        i.putExtra(UnpaidCardDetails.Name, Name);
+        i.putExtra(CardDetailsForm.Name, Name);
+        i.putExtra(CardDetailsForm.Description, description);
+        i.putExtra(CardDetailsForm.Img, img);
+        i.putExtra(String.valueOf(CardDetailsForm.Total), total);
+        i.putExtra(String.valueOf(CardDetailsForm.quantity), Qty);
 
 
         view.getContext().startActivity(i);

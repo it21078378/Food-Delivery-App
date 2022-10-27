@@ -102,7 +102,7 @@ public class UnpaidCardDetails extends AppCompatActivity {
         map.put("Uid", uid);
 
 
-        FirebaseDatabase.getInstance().getReference().child("paymentDetails").push()
+        FirebaseDatabase.getInstance().getReference().child("paidDetails").push()
                 .setValue(map)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
