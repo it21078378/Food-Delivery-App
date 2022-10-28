@@ -65,6 +65,7 @@ public class CardDetailsForm extends Activity {
             public void onClick(View view) {
                 insertPaidData();
                 clearAll();
+                finish();
             }
         });
 
@@ -105,7 +106,7 @@ public class CardDetailsForm extends Activity {
         map.put("name", name);
         map.put("description", description);
         map.put("img", img);
-        map.put("Uid", uid);
+        map.put("uid", uid);
 
 
         FirebaseDatabase.getInstance().getReference().child("paidDetails").push()
@@ -135,7 +136,7 @@ public class CardDetailsForm extends Activity {
         mapUp.put("name", name);
         mapUp.put("description", description);
         mapUp.put("img", img);
-        mapUp.put("Uid", uid);
+        mapUp.put("uid", uid);
 
 
         FirebaseDatabase.getInstance().getReference().child("unpaidDetails").push()

@@ -4,16 +4,18 @@ public class UnpaidModel {
     public String name;
     public String img;
     public double total;
-    public int quantity;
+    public String quantity;
+    public String uid;
 
     public UnpaidModel() {
     }
 
-    public UnpaidModel(String name, String img, double total, int quantity) {
+    public UnpaidModel(String name, String img, double total, String quantity, String uid) {
         this.name = name;
         this.img = img;
         this.total = total;
         this.quantity = quantity;
+        this.uid = uid;
     }
 
     public String getName() {
@@ -40,11 +42,19 @@ public class UnpaidModel {
         this.total = total;
     }
 
-    public int getQuantity() {
+    public String getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(String quantity) {
         this.quantity = quantity;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 }

@@ -18,11 +18,22 @@ public class MyAccountFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
+        View view = inflater.inflate(R.layout.fragment_my_account, container, false);
+        Button startActivity = (Button) view.findViewById(R.id.paymentHISTORY);
+        startActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity();
+            }
+        });
 
-        return inflater.inflate(R.layout.fragment_my_account, container, false);
+        return view;
     }
 
-
+    private void startActivity() {
+        Intent i = new Intent(getActivity(), PaymentHistory.class);
+        startActivity(i);
+    }
 
 
 }

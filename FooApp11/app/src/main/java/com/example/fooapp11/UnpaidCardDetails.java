@@ -99,7 +99,7 @@ public class UnpaidCardDetails extends AppCompatActivity {
         map.put("name", name);
         map.put("description", description);
         map.put("img", img);
-        map.put("Uid", uid);
+        map.put("uid", uid);
 
 
         FirebaseDatabase.getInstance().getReference().child("paidDetails").push()

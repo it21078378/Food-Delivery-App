@@ -40,7 +40,7 @@ public class paid extends Fragment {
 
         FirebaseRecyclerOptions<PaidModel> option=
                 new FirebaseRecyclerOptions.Builder<PaidModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("paidDetails").orderByChild("Uid").startAt(uid).endAt(uid+"~"), PaidModel.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("paidDetails").orderByChild("uid").startAt(uid).endAt(uid+"~"), PaidModel.class)
                         .build();
 
         paidAdapter = new paymentPaidRV(option);
