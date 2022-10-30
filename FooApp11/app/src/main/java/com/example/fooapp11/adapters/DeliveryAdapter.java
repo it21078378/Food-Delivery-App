@@ -59,7 +59,7 @@ public class DeliveryAdapter extends RecyclerView.Adapter<DeliveryAdapter.ViewHo
             @Override
             public void onClick(View view) {
                 ViewDialogUpdate viewDialogUpdate = new ViewDialogUpdate();
-                viewDialogUpdate.showDialog(context, addresses.getId(), addresses.getHNo(), addresses.getBuilding(), addresses.getStreet(), addresses.getArea(), addresses.getLandmark());
+                viewDialogUpdate.showDialog(context, addresses.getUserId(), addresses.getId(), addresses.getHNo(), addresses.getBuilding(), addresses.getStreet(), addresses.getArea(), addresses.getLandmark());
             }
         });
 
@@ -107,7 +107,7 @@ public class DeliveryAdapter extends RecyclerView.Adapter<DeliveryAdapter.ViewHo
 
 
     public class ViewDialogUpdate {
-        public void showDialog(Context context, String id, String HNo, String building, String street, String area, String landmark) {
+        public void showDialog(Context context, String userId, String id, String HNo, String building, String street, String area, String landmark) {
             final Dialog dialog = new Dialog(context);
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
             dialog.setCancelable(false);
@@ -157,7 +157,7 @@ public class DeliveryAdapter extends RecyclerView.Adapter<DeliveryAdapter.ViewHo
                         if (newHNo.equals(HNo) && newBuilding.equals(building) && newStreet.equals(street) && newArea.equals(area) && newLandmark.equals(landmark)) {
                             Toast.makeText(context, "you don't change anything", Toast.LENGTH_SHORT).show();
                         } else {
-                            databaseReference.child("ADDRESSES").child(id).setValue(new DeliveryModel(id, newHNo, newBuilding, newStreet, newArea, newLandmark));
+                            databaseReference.child("ADDRESSES").child(id).setValue(new DeliveryModel(userId, id, newHNo, newBuilding, newStreet, newArea, newLandmark));
                             Toast.makeText(context, "Address Updated successfully!", Toast.LENGTH_SHORT).show();
                             dialog.dismiss();
                         }
