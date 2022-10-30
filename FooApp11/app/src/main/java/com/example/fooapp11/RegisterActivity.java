@@ -45,7 +45,15 @@ public class RegisterActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                registerUser();
+                passwordText = password.getText().toString().trim();
+                repasswordText = repassword.getText().toString().trim();
+                if(passwordText.equals(repasswordText)){
+                    registerUser();
+                }
+                else{
+                    log.setText("Password mismatch");
+                }
+
             }
         });
 
@@ -62,8 +70,8 @@ public class RegisterActivity extends AppCompatActivity {
     private void registerUser() {
         nameText = name.getText().toString().trim();
         emailText = email.getText().toString().trim();
-        passwordText = password.getText().toString().trim();
-        repasswordText = repassword.getText().toString().trim();
+
+
 
             mAuth.createUserWithEmailAndPassword(emailText, passwordText)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {

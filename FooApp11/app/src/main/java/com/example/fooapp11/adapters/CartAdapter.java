@@ -21,6 +21,9 @@ import com.example.fooapp11.SingleFood;
 import com.example.fooapp11.model.Cart;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.squareup.picasso.Picasso;
 
@@ -30,6 +33,8 @@ public class CartAdapter extends ArrayAdapter<Cart> {
 
     FirebaseFirestore db;
     Button remove;
+    DatabaseReference databaseReference;
+
     // constructor for our list view adapter.
     public CartAdapter(@NonNull Context context, ArrayList<Cart> dataModalArrayList) {
         super(context, 0, dataModalArrayList);
@@ -56,6 +61,8 @@ public class CartAdapter extends ArrayAdapter<Cart> {
         TextView amount = listitemView.findViewById(R.id.amount);
         TextView quantity = listitemView.findViewById(R.id.quantity);
         TextView total = listitemView.findViewById(R.id.total);
+        remove = (Button)listitemView.findViewById(R.id.remove);
+        databaseReference = FirebaseDatabase.getInstance().getReference();
 
         // after initializing our items we are
         // setting data to our view.
@@ -64,6 +71,7 @@ public class CartAdapter extends ArrayAdapter<Cart> {
         amount.setText(String.valueOf(dataModal.getPamount()));
         quantity.setText(String.valueOf(dataModal.getPquantity()));
         total.setText(String.valueOf(dataModal.getPtotal()));
+
 
         // in below line we are using Picasso to
         // load image from URL in our Image VIew.
@@ -104,15 +112,11 @@ public class CartAdapter extends ArrayAdapter<Cart> {
             }
         });
 
-        remove = (Button)listitemView.findViewById(R.id.remove);
-        remove.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                db.collection("Cart").document(dataModal.getPtitle()).delete();
 
-            }
-        });
+
         return listitemView;
+
+
     }
 
 
