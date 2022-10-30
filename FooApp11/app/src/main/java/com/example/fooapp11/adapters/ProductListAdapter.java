@@ -102,7 +102,6 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
             description = itemView.findViewById(R.id.description);
             image = itemView.findViewById(R.id.image);
 
-            edit = itemView.findViewById(R.id.edit);
 
 
 

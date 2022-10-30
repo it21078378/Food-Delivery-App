@@ -29,11 +29,27 @@ public class paymentPaidRV extends FirebaseRecyclerAdapter<PaidModel, paymentPai
         super(options);
     }
 
+    class viewHolder extends RecyclerView.ViewHolder{
+        CircleImageView img;
+        TextView name, qty, price;
+
+
+        public viewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            img = (CircleImageView)itemView.findViewById(R.id.pCardImg);
+            name = (TextView)itemView.findViewById(R.id.pCardName);
+            qty = (TextView)itemView.findViewById(R.id.pCardQty);
+            price = (TextView)itemView.findViewById(R.id.pCardPrice);
+        }
+    }
+
     @Override
     protected void onBindViewHolder(@NonNull viewHolder holder, int position, @NonNull PaidModel model) {
         holder.name.setText(model.getName());
         holder.price.setText( String.valueOf(model.getTotal()));
-        holder.qty.setText( String.valueOf(model.getQuantity()));
+        holder.qty.setText(model.getQuantity());
+
 
         Glide.with(holder.img.getContext())
                 .load(model.getImg())
@@ -52,18 +68,5 @@ public class paymentPaidRV extends FirebaseRecyclerAdapter<PaidModel, paymentPai
         return new viewHolder(view);
     }
 
-    class viewHolder extends RecyclerView.ViewHolder{
-        CircleImageView img;
-        TextView name, qty, price;
 
-
-        public viewHolder(@NonNull View itemView) {
-            super(itemView);
-
-            img = (CircleImageView)itemView.findViewById(R.id.pCardImg);
-            name = (TextView)itemView.findViewById(R.id.pCardName);
-            qty = (TextView)itemView.findViewById(R.id.pCardQty);
-            price = (TextView)itemView.findViewById(R.id.pCardPrice);
-        }
-    }
 }

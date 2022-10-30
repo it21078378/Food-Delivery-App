@@ -27,7 +27,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class paymentUnpaidRV extends FirebaseRecyclerAdapter<UnpaidModel, paymentUnpaidRV.viewHolder> {
 
-    String Name, Qty, img , description, total;
+    String Name, Qty, img , description;
+    double total;
 
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
@@ -116,8 +117,8 @@ public class paymentUnpaidRV extends FirebaseRecyclerAdapter<UnpaidModel, paymen
             public void onClick(View view) {
                 Name=holder.name.getText().toString();
                 Qty=holder.qty.getText().toString();
-                total=holder.price.getText().toString();
-                img=holder.img.getContext().toString();
+                total=model.getTotal();
+                img= model.getImg();
 
 
                 AlertDialog.Builder builder=new AlertDialog.Builder(holder.name.getContext());
@@ -151,7 +152,11 @@ public class paymentUnpaidRV extends FirebaseRecyclerAdapter<UnpaidModel, paymen
     private void sendData(View view) {
         Intent i = new Intent(view.getContext(), UnpaidCardDetails.class);
 
-        i.putExtra(UnpaidCardDetails.Name, Name);
+        i.putExtra(CardDetailsForm.Name, Name);
+        i.putExtra(CardDetailsForm.Description, description);
+        i.putExtra(CardDetailsForm.Img, img);
+        i.putExtra(String.valueOf(CardDetailsForm.Total), total);
+        i.putExtra(CardDetailsForm.quantity, Qty);
 
 
         view.getContext().startActivity(i);

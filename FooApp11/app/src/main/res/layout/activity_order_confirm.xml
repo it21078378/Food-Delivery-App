@@ -38,6 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="161dp"
             android:layout_margin="10sp"
+            android:background="@color/darkBlue"
             android:orientation="horizontal">
 
             <ImageView
@@ -85,7 +86,7 @@
                         android:layout_weight="1"
                         android:background="@color/darkBlue"
                         android:gravity="center"
-                        android:text="Price"
+                        android:text="@string/priceHintOC"
                         android:textColor="@color/white" />
 
                     <TextView
@@ -102,54 +103,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10sp"
-            android:background="@color/darkBlue"
-            android:orientation="horizontal"
-            android:padding="10sp">
 
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/text_qunt"
-                android:textColor="@color/white" />
-
-            <Button
-                android:id="@+id/decrease"
-                android:layout_width="2dp"
-                android:layout_height="48dp"
-                android:layout_margin="5sp"
-                android:layout_weight="1"
-                android:onClick="decreaseInteger"
-                android:text="@string/decrease" />
-
-            <TextView
-                android:id="@+id/integer_number"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/count"
-                android:textAlignment="center"
-                android:textColor="@color/white" />
-
-            <Button
-                android:id="@+id/increase"
-                android:layout_width="3dp"
-                android:layout_height="48dp"
-                android:layout_margin="5sp"
-                android:layout_weight="1"
-                android:width="100dp"
-                android:maxWidth="100dp"
-                android:minWidth="50dip"
-                android:onClick="increaseInteger"
-                android:text="@string/increase" />
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -237,7 +191,8 @@
             android:id="@+id/nextBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/purchase" />
+            android:text="@string/purchase"
+            android:textColor="@color/white" />
 
 
     </LinearLayout>

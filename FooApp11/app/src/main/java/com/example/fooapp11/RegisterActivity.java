@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fooapp11.model.User;
@@ -24,6 +25,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     EditText name, email, password, repassword;
     Button register;
+    TextView log, login_link;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,14 +39,30 @@ public class RegisterActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.password);
         repassword = (EditText) findViewById(R.id.repassword);
         register = (Button) findViewById(R.id.register);
+        log = (TextView) findViewById(R.id.log);
+        login_link = (TextView) findViewById(R.id.login_link);
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                registerUser();
+                passwordText = password.getText().toString().trim();
+                repasswordText = repassword.getText().toString().trim();
+                if(passwordText.equals(repasswordText)){
+                    registerUser();
+                }
+                else{
+                    log.setText("Password mismatch");
+                }
+
             }
         });
 
+        login_link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+            }
+        });
 
 
     }
@@ -52,8 +70,8 @@ public class RegisterActivity extends AppCompatActivity {
     private void registerUser() {
         nameText = name.getText().toString().trim();
         emailText = email.getText().toString().trim();
-        passwordText = password.getText().toString().trim();
-        repasswordText = repassword.getText().toString().trim();
+
+
 
             mAuth.createUserWithEmailAndPassword(emailText, passwordText)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -71,16 +89,18 @@ public class RegisterActivity extends AppCompatActivity {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
                                                 if(task.isSuccessful()){
+                                                    log.setText("Successfully Registered");
                                                     Toast.makeText(RegisterActivity.this, "Successfully Registered", Toast.LENGTH_SHORT).show();
-                                                    startActivity(new Intent(RegisterActivity.this, MainActivity.class));
                                                 }
                                                 else{
+                                                    log.setText("Registration Failed");
                                                     Toast.makeText(RegisterActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
                                                 }
                                             }
                                         });
                             }
                             else{
+                                log.setText(task.getException().getMessage());
                                 Toast.makeText(RegisterActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         }
