@@ -120,5 +120,23 @@
     <string name="add_payment">Add Payment</string>
     <string name="buy">Buy</string>
 
+    <!--delivery -->
+    <string name="hintHNo">Apt or House No</string>
+    <string name="hintBuilding">Business or building name</string>
+    <string name="hintStreet">Street number and name</string>
+    <string name="hintArea">Area/District</string>
+    <string name="hintLandmark">Landmark</string>
+    <string name="textAddressDetails">Enter Your Address Details</string>
+    <string name="BtnTextAddAddress">Save</string>
+    <string name="BtnTextExitBtn">Exit</string>
+    <string name="textSavedAddresses">Saved Addresses</string>
+    <string name="BtnTextAddNewAddressBtn">ADD NEW ADDRESS</string>
+    <string name="textDeleteConf">Are You Sure ?</string>
+    <string name="BtnDeleteConfYes">Yes, Delete</string>
+    <string name="BtnDeleteConfNo">No, Exit</string>
+    <string name="BtnTextDelete">DELETE</string>
+    <string name="BtnTextUpdate">UPDATE</string>
+    <string name="BtnTextDeliveryLocations">Delivery Locations</string>
+
 
 </resources>

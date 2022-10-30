@@ -45,7 +45,8 @@ public class SavedAddresses extends AppCompatActivity {
         setContentView(R.layout.activity_saved_addresses);
 
         FirebaseDatabase.getInstance().setPersistenceEnabled(true); // work offline
-        Objects.requireNonNull(getSupportActionBar()).hide();
+        if (getSupportActionBar() != null)
+            getSupportActionBar().hide();
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
@@ -132,7 +133,7 @@ public class SavedAddresses extends AppCompatActivity {
                         Toast.makeText(context, "Please Enter All data...", Toast.LENGTH_SHORT).show();
                     } else {
                         databaseReference.child("ADDRESSES").child(id).setValue(new DeliveryModel(id, HNo, building, street, area, landmark));
-                        Toast.makeText(context, "DONE!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Address Added Successfully!", Toast.LENGTH_SHORT).show();
                         dialog.dismiss();
                     }
                 }

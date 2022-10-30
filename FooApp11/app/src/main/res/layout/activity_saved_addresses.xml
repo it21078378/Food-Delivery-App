@@ -10,11 +10,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Saved Addresses"
-        android:background="@color/purple_500"
-        android:textSize="23sp"
         android:gravity="center"
-        android:textColor="#FFF"/>
+        android:text="@string/textSavedAddresses"
+        android:textColor="@color/darkBlue"
+        android:textSize="23sp"
+        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -27,8 +27,8 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/green"
-        android:text="ADD NEW ADDRESS"
+        android:text="@string/BtnTextAddNewAddressBtn"
         android:textColor="@android:color/white"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
 </LinearLayout>
