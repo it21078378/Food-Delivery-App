@@ -86,7 +86,7 @@
                         android:layout_weight="1"
                         android:background="@color/darkBlue"
                         android:gravity="center"
-                        android:text="Price"
+                        android:text="@string/priceHintOC"
                         android:textColor="@color/white" />
 
                     <TextView
@@ -191,7 +191,8 @@
             android:id="@+id/nextBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/purchase" />
+            android:text="@string/purchase"
+            android:textColor="@color/white" />
 
 
     </LinearLayout>
