@@ -1,6 +1,9 @@
 package com.example.fooapp11.adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,16 +16,22 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.fooapp11.R;
+import com.example.fooapp11.SingleFood;
+import com.example.fooapp11.model.Cart;
 import com.example.fooapp11.model.Food;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.squareup.picasso.Picasso;
 
 
 import java.util.ArrayList;
 
-public class FoodAdapter extends ArrayAdapter<Food> {
+public class FoodAdapter extends ArrayAdapter<Cart> {
 
+    FirebaseFirestore db;
     // constructor for our list view adapter.
-    public FoodAdapter(@NonNull Context context, ArrayList<Food> dataModalArrayList) {
+    public FoodAdapter(@NonNull Context context, ArrayList<Cart> dataModalArrayList) {
         super(context, 0, dataModalArrayList);
     }
 
@@ -39,16 +48,24 @@ public class FoodAdapter extends ArrayAdapter<Food> {
         // after inflating an item of listview item
         // we are getting data from array list inside
         // our modal class.
-        Food dataModal = getItem(position);
+        Cart dataModal = getItem(position);
 
         // initializing our UI components of list view item.
         TextView title = listitemView.findViewById(R.id.title);
         ImageView image = listitemView.findViewById(R.id.image);
+        TextView description = listitemView.findViewById(R.id.description);
+        TextView amount = listitemView.findViewById(R.id.amount);
+        TextView quantity = listitemView.findViewById(R.id.quantity);
+        TextView total = listitemView.findViewById(R.id.total);
 
         // after initializing our items we are
         // setting data to our view.
         // below line is use to set data to our text view.
-        title.setText(dataModal.getName());
+        title.setText(dataModal.getPtitle());
+        amount.setText(String.valueOf(dataModal.getPamount()));
+        quantity.setText(String.valueOf(dataModal.getPquantity()));
+        total.setText(String.valueOf(dataModal.getPtotal()));
+        description.setText(dataModal.getPdescription());
 
         // in below line we are using Picasso to
         // load image from URL in our Image VIew.
@@ -62,9 +79,32 @@ public class FoodAdapter extends ArrayAdapter<Food> {
             public void onClick(View v) {
                 // on the item click on our list view.
                 // we are displaying a toast message.
-                Toast.makeText(getContext(), "Item clicked is : " + dataModal.getName(), Toast.LENGTH_SHORT).show();
+
+                Toast.makeText(getContext(), "Item clicked is : " + dataModal.getPtitle(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getContext(), SingleFood.class);
+                String ptitle = dataModal.getPtitle();
+                int pamount= dataModal.getPamount();
+                String imgUrl= dataModal.getImgUrl();
+                String pdescription = dataModal.getPdescription();
+
+                //Create the bundle
+                Bundle bundle = new Bundle();
+
+                //Add data to the bundle
+                bundle.putString("title", ptitle);
+                bundle.putInt("amount", pamount);
+                bundle.putString("description", pdescription);
+                bundle.putString("imgUrl", imgUrl);
+                bundle.putString("description", pdescription);
+
+                //Add the bundle to the intent
+                intent.putExtras(bundle);
+                v.getContext().startActivity(intent);
+
             }
         });
         return listitemView;
     }
+
+
 }

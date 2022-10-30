@@ -1,7 +1,9 @@
 package com.example.fooapp11;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -32,10 +34,15 @@ public class ReviewDetails extends AppCompatActivity {
     private FirebaseFirestore db;
     ProgressBar loadingPB;
 
+    Button btnAddReview;
+    Button btnBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review_details);
+
+        btnAddReview = (Button)findViewById(R.id.btnAddReview);
+        btnBack = (Button)findViewById(R.id.btnBack) ;
 
         // initializing our variables.
         reviewRV = findViewById(R.id.reviewRV);
@@ -59,7 +66,7 @@ public class ReviewDetails extends AppCompatActivity {
         // below line is use to get the data from Firebase Firestore.
         // previously we were saving data on a reference of Courses
         // now we will be getting the data from the same reference.
-        db.collection("Courses").get()
+        db.collection("Reviews").get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
@@ -99,6 +106,22 @@ public class ReviewDetails extends AppCompatActivity {
                         Toast.makeText(ReviewDetails.this, "Fail to get the data.", Toast.LENGTH_SHORT).show();
                     }
                 });
+
+        btnAddReview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ReviewDetails.this, AddReviewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ReviewDetails.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

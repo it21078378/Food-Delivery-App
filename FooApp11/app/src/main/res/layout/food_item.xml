@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/image"
             android:padding="3dp"
-            android:text="Category Text"
+            android:text="@string/category_text"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="22sp" />
@@ -79,12 +79,11 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/quantity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@id/amount"
                     android:padding="3dp"
-                    android:text="Quantity"
+                    android:text="@string/quantity"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="22sp" />
@@ -96,13 +95,7 @@
                     android:gravity="center"
                     android:orientation="horizontal">
 
-                <ImageButton
-                    android:layout_height="25sp"
-                    android:layout_width="25sp"
-                    android:background="@drawable/downarrow"
-                    />
-
-                <TextView
+                    <TextView android:id="@+id/quantity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="05"
@@ -112,11 +105,6 @@
                     android:layout_marginRight="10dp"
                     />
 
-                <ImageButton
-                    android:layout_height="25sp"
-                    android:layout_width="25sp"
-                    android:background="@drawable/uparrow"
-                    />
                 </LinearLayout>
             </LinearLayout>
 
@@ -130,7 +118,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/title"
                 android:padding="3dp"
-                android:text="Total"
+                android:text="@string/total"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="22sp" />
@@ -152,7 +140,7 @@
                 android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Remove"
+                android:text="@string/remove_btn"
                 android:layout_margin="10dp"
                 android:textSize="22sp"
                 />

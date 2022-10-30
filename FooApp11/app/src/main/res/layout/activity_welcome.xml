@@ -37,24 +37,24 @@
         android:textSize="30sp"
 
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/register"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/login"
         android:textColor="@color/white"
         android:textSize="30sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button3"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintBaseline_toBaselineOf="@+id/register"
+        app:layout_constraintEnd_toStartOf="@+id/register"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/register"
@@ -62,7 +62,7 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button2" />
+        app:layout_constraintStart_toEndOf="@+id/login" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
