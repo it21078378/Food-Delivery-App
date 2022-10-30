@@ -18,6 +18,16 @@
         android:layout_height="wrap_content"
         android:text="See Reviews"
         />
+
+        <Button
+            android:id="@+id/locations"
+            android:layout_marginTop="2sp"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/BtnTextDeliveryLocations"
+            />
+
     <ListView
         android:id="@+id/products"
         android:layout_width="match_parent"
