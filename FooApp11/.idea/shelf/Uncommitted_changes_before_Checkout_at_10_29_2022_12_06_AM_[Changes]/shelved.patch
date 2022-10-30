@@ -1,0 +1,319 @@
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    package=\"com.example.fooapp11\">\r\n\r\n    <uses-permission android:name=\"android.permission.INTERNET\" />\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:dataExtractionRules=\"@xml/data_extraction_rules\"\r\n        android:fullBackupContent=\"@xml/backup_rules\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.FooApp11\"\r\n        tools:targetApi=\"31\">\r\n        <activity\r\n            android:name=\".SavedAddresses\"\r\n            android:exported=\"true\" >\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n\r\n        </activity>\r\n        <activity\r\n            android:name=\".ViewProducts\"\r\n            android:exported=\"true\"></activity>\r\n        <activity\r\n            android:name=\".AddProduct\"\r\n            android:exported=\"true\"></activity>\r\n        <activity\r\n            android:name=\".ChooseLoginActivity\"\r\n            android:exported=\"true\" />\r\n        <activity\r\n            android:name=\".RegisterActivity\"\r\n            android:exported=\"true\" />\r\n        <activity\r\n            android:name=\".LoginActivity\"\r\n            android:exported=\"true\" />\r\n        <activity\r\n            android:name=\".WelcomeActivity\"\r\n            android:exported=\"true\">\r\n\r\n        </activity>\r\n        <activity\r\n            android:name=\".ReviewDetails\"\r\n            android:exported=\"true\" />\r\n        <activity\r\n            android:name=\".AddReviewActivity\"\r\n            android:exported=\"true\"></activity>\r\n        <activity\r\n            android:name=\".SingleFood\"\r\n            android:exported=\"true\"></activity>\r\n        <activity\r\n            android:name=\".MainActivity\"\r\n            android:exported=\"true\"></activity>\r\n        <activity\r\n            android:name=\".UnpaidCardDetails\"\r\n            android:exported=\"true\"></activity>\r\n        <activity\r\n            android:name=\".PaymentHistory\"\r\n            android:exported=\"true\"></activity>\r\n        <activity\r\n            android:name=\".OrderConfirm\"\r\n            android:exported=\"true\"></activity>\r\n        <activity\r\n            android:name=\".CardDetailsForm\"\r\n            android:exported=\"true\" />\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	
++++ b/app/src/main/AndroidManifest.xml	
+@@ -18,6 +18,7 @@
+         <activity
+             android:name=".SavedAddresses"
+             android:exported="true" >
++
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+ 
+@@ -27,10 +28,14 @@
+         </activity>
+         <activity
+             android:name=".ViewProducts"
+-            android:exported="true"></activity>
++            android:exported="true">
++
++        </activity>
+         <activity
+             android:name=".AddProduct"
+-            android:exported="true"></activity>
++            android:exported="true">
++
++        </activity>
+         <activity
+             android:name=".ChooseLoginActivity"
+             android:exported="true" />
+@@ -47,25 +52,39 @@
+         </activity>
+         <activity
+             android:name=".ReviewDetails"
+-            android:exported="true" />
++            android:exported="true" >
++
++
++        </activity>
+         <activity
+             android:name=".AddReviewActivity"
+-            android:exported="true"></activity>
++            android:exported="true">
++        </activity>
+         <activity
+             android:name=".SingleFood"
+-            android:exported="true"></activity>
++            android:exported="true">
++
++        </activity>
+         <activity
+             android:name=".MainActivity"
+-            android:exported="true"></activity>
++            android:exported="true">
++
++        </activity>
+         <activity
+             android:name=".UnpaidCardDetails"
+-            android:exported="true"></activity>
++            android:exported="true">
++
++        </activity>
+         <activity
+             android:name=".PaymentHistory"
+-            android:exported="true"></activity>
++            android:exported="true">
++
++        </activity>
+         <activity
+             android:name=".OrderConfirm"
+-            android:exported="true"></activity>
++            android:exported="true">
++
++        </activity>
+         <activity
+             android:name=".CardDetailsForm"
+             android:exported="true" />
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>buildscript {\r\n    dependencies {\r\n        classpath 'com.google.gms:google-services:4.3.14'\r\n    }\r\n}// Top-level build file where you can add configuration options common to all sub-projects/modules.\r\nplugins {\r\n    id 'com.android.application' version '7.2.2' apply false\r\n    id 'com.android.library' version '7.2.2' apply false\r\n}\r\n\r\ntask clean(type: Delete) {\r\n    delete rootProject.buildDir\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build.gradle b/build.gradle
+--- a/build.gradle	
++++ b/build.gradle	
+@@ -1,4 +1,12 @@
+ buildscript {
++
++    repositories {
++        // Make sure that you have the following two repositories
++        google()  // Google's Maven repository
++
++        mavenCentral()  // Maven Central repository
++
++    }
+     dependencies {
+         classpath 'com.google.gms:google-services:4.3.14'
+     }
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    id 'com.android.application'\r\n    id 'com.google.gms.google-services'\r\n}\r\n\r\nandroid {\r\n    compileSdk 32\r\n\r\n    defaultConfig {\r\n        applicationId \"com.example.fooapp11\"\r\n        minSdk 28\r\n        targetSdk 32\r\n        versionCode 1\r\n        versionName \"1.0\"\r\n\r\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            minifyEnabled false\r\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\r\n        }\r\n    }\r\n    compileOptions {\r\n        sourceCompatibility JavaVersion.VERSION_1_8\r\n        targetCompatibility JavaVersion.VERSION_1_8\r\n    }\r\n}\r\n\r\ndependencies {\r\n\r\n    implementation 'com.google.firebase:firebase-database:20.1.0'\r\n    implementation 'androidx.appcompat:appcompat:1.5.1'\r\n    implementation 'com.google.android.material:material:1.6.1'\r\n    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'\r\n    implementation 'com.google.firebase:firebase-firestore:24.3.0'\r\n    implementation 'com.google.firebase:firebase-auth:21.0.8'\r\n    implementation 'com.google.firebase:firebase-database:20.0.6'\r\n    testImplementation 'junit:junit:4.13.2'\r\n    androidTestImplementation 'androidx.test.ext:junit:1.1.3'\r\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'\r\n    implementation 'com.google.firebase:firebase-firestore:24.4.0'\r\n    implementation 'androidx.recyclerview:recyclerview:1.1.0'\r\n    implementation 'com.github.bumptech.glide:glide:4.11.0'\r\n    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'\r\n    implementation 'de.hdodenhof:circleimageview:3.1.0'\r\n    implementation 'com.google.firebase:firebase-auth:21.1.0'\r\n    implementation 'com.squareup.picasso:picasso:2.71828'\r\n\r\n    implementation 'androidx.navigation:navigation-fragment:2.3.5'\r\n    implementation 'androidx.navigation:navigation-ui:2.3.5'\r\n    implementation 'com.google.firebase:firebase-database:19.2.1'\r\n\r\n    implementation 'com.firebaseui:firebase-ui-database:8.0.2'\r\n    implementation \"androidx.recyclerview:recyclerview:1.1.0\"\r\n    implementation \"androidx.recyclerview:recyclerview-selection:1.1.0-rc01\"\r\n    implementation \"androidx.cardview:cardview:1.0.0\"\r\n    implementation 'de.hdodenhof:circleimageview:3.1.0'\r\n    implementation 'com.github.bumptech.glide:glide:4.11.0'\r\n    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'\r\n    implementation 'com.orhanobut:dialogplus:1.11@aar'\r\n\r\n    testImplementation 'junit:junit:4.13.2'\r\n    androidTestImplementation 'androidx.test.ext:junit:1.1.3'\r\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'\r\n\r\n    implementation platform('com.google.firebase:firebase-bom:31.0.1')\r\n    implementation 'com.google.firebase:firebase-auth'\r\n\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle b/app/build.gradle
+--- a/app/build.gradle	
++++ b/app/build.gradle	
+@@ -68,5 +68,4 @@
+     implementation platform('com.google.firebase:firebase-bom:31.0.1')
+     implementation 'com.google.firebase:firebase-auth'
+ 
+-
+ }
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DesignSurface\">\r\n    <option name=\"filePathToZoomLevelMap\">\r\n      <map>\r\n        <entry key=\"..\\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_add_product.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_edit_product.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_login.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_main.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_order_confirm.xml\" value=\"0.25\" />\r\n        <entry key=\"..\\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_product_list.xml\" value=\"0.19583333333333333\" />\r\n        <entry key=\"..\\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_register.xml\" value=\"0.15\" />\r\n        <entry key=\"..\\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_saved_addresses.xml\" value=\"0.22\" />\r\n        <entry key=\"..\\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_single_food.xml\" value=\"0.18\" />\r\n        <entry key=\"..\\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/address_item.xml\" value=\"0.1287037037037037\" />\r\n        <entry key=\"..\\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/alert_dialog_add_new_address.xml\" value=\"0.1287037037037037\" />\r\n        <entry key=\"..\\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/food_item.xml\" value=\"0.15\" />\r\n        <entry key=\"..\\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_cart.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_home.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_my_account.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/layout_food.xml\" value=\"0.1453125\" />\r\n        <entry key=\"..\\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/layout_list.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/product_item.xml\" value=\"0.19583333333333333\" />\r\n        <entry key=\"..\\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/productlist_item.xml\" value=\"0.19583333333333333\" />\r\n        <entry key=\"..\\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/view_dialog_confirm_delete.xml\" value=\"0.1287037037037037\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_11\" default=\"true\" project-jdk-name=\"Android Studio default JDK\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -3,26 +3,99 @@
+   <component name="DesignSurface">
+     <option name="filePathToZoomLevelMap">
+       <map>
+-        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_add_product.xml" value="0.1" />
+-        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_edit_product.xml" value="0.1" />
+-        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_login.xml" value="0.1" />
+-        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_main.xml" value="0.1" />
+-        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_order_confirm.xml" value="0.25" />
+-        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_product_list.xml" value="0.19583333333333333" />
+-        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_register.xml" value="0.15" />
+-        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_saved_addresses.xml" value="0.22" />
+-        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_single_food.xml" value="0.18" />
+-        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/address_item.xml" value="0.1287037037037037" />
+-        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/alert_dialog_add_new_address.xml" value="0.1287037037037037" />
+-        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/food_item.xml" value="0.15" />
+-        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_cart.xml" value="0.1" />
+-        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+-        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_my_account.xml" value="0.1" />
+-        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/layout_food.xml" value="0.1453125" />
+-        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/layout_list.xml" value="0.1" />
+-        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/product_item.xml" value="0.19583333333333333" />
+-        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/productlist_item.xml" value="0.19583333333333333" />
+-        <entry key="..\:/android group project/group project/group project/Food-Delivery-App/FooApp11/app/src/main/res/layout/view_dialog_confirm_delete.xml" value="0.1287037037037037" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_add_product.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_add_review.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_card_details_form.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_choose_login.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_food_details.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_login.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_main.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_order_confirm.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_payment_history.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_product_list.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_register.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_review_details.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_saved_addresses.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_single_food.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_unpaid_card_details.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_view_products.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_welcome.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/address_item.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/alert_dialog_add_new_address.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/food_item.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_unpaid.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/layout_food.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/layout_list.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/payment_history_card.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/payment_history_unpaid_card.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/product_item.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/productlist_item.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/review_item.xml" value="0.2" />
++        <entry key="..\:/SLIIT/Y2S2/IT2010 - Mobile Application Development/1) MAD Project/Food-Delivery-App/FooApp11/app/src/main/res/layout/view_dialog_confirm_delete.xml" value="0.2" />
++        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/drawable/rounded.xml" value="0.1" />
++        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_add_product.xml" value="0.24739583333333334" />
++        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_card_details_form.xml" value="0.264" />
++        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_order_confirm.xml" value="0.264" />
++        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_paid.xml" value="0.1" />
++        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_payment_history.xml" value="0.264" />
++        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_unpaid.xml" value="0.14444444444444443" />
++        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_unpaid_card_details.xml" value="0.264" />
++        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_paid.xml" value="0.1" />
++        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_unpaid.xml" value="0.1" />
++        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/payment_history_card.xml" value="0.264" />
++        <entry key="..\:/Users/ASUS/Documents/GitHub/Food-Delivery-App/FooApp11/app/src/main/res/layout/payment_history_unpaid_card.xml" value="0.264" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/drawable-v24/edit_text_shape.xml" value="0.2025" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/drawable-v24/edit_text_shape2.xml" value="0.166" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/drawable-v24/shape2.xml" value="0.2025" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/drawable-v24/shape3.xml" value="0.1" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/drawable/close.xml" value="0.166" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/drawable/gradient.xml" value="0.1135" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/drawable/ic_baseline_arrow_drop_up_24.xml" value="0.111" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_add_review.xml" value="0.1" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_choose_login.xml" value="0.2" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_course_details.xml" value="0.1" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_food_details.xml" value="0.16576086956521738" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_login.xml" value="0.25" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_main.xml" value="0.1" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_notification.xml" value="0.1403985507246377" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_notification_history.xml" value="0.18" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_register.xml" value="0.1331521739130435" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_review.xml" value="0.18" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_review_details.xml" value="0.12" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_settings.xml" value="0.33" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_single_food.xml" value="0.21" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/activity_welcome.xml" value="0.1" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/course_item.xml" value="0.1094017094017094" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/food_item.xml" value="0.22" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/fragment_cart.xml" value="0.1" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/fragment_home.xml" value="0.1" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/fragment_my_account.xml" value="0.22" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/fragment_review.xml" value="0.17074275362318841" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/layout_food.xml" value="0.1" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/layout_list.xml" value="0.1" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/notification_item.xml" value="0.5" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/product_item.xml" value="0.19895833333333332" />
++        <entry key="..\:/Users/USER/AndroidStudioProjects/FooApp11/app/src/main/res/layout/review_item.xml" value="0.1" />
++        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_add_product.xml" value="0.2" />
++        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_add_review.xml" value="0.19583333333333333" />
++        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_edit_product.xml" value="0.11574074074074074" />
++        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_food_details.xml" value="0.1" />
++        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_login.xml" value="0.2" />
++        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
++        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_register.xml" value="0.2" />
++        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_review_details.xml" value="0.19583333333333333" />
++        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_single_food.xml" value="0.22" />
++        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_view_products.xml" value="0.1796875" />
++        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/activity_welcome.xml" value="0.1" />
++        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/food_item.xml" value="0.2" />
++        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_cart.xml" value="0.1796875" />
++        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_home.xml" value="0.19583333333333333" />
++        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/fragment_review.xml" value="0.1796875" />
++        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/layout_food.xml" value="0.2" />
++        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/p_item.xml" value="0.25" />
++        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/product_item.xml" value="0.19583333333333333" />
++        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/productlist_item.xml" value="0.2188679245283019" />
++        <entry key="..\:/Work/Food-Delivery-App/FooApp11/app/src/main/res/layout/review_item.xml" value="0.1796875" />
+       </map>
+     </option>
+   </component>
+Index: app/src/main/res/layout/alert_dialog_add_new_address.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.cardview.widget.CardView xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    android:layout_width=\"300dp\"\r\n    android:layout_height=\"wrap_content\"\r\n    android:layoutDirection=\"ltr\"\r\n    app:cardBackgroundColor=\"@android:color/white\"\r\n    app:cardCornerRadius=\"5dp\">\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:orientation=\"vertical\"\r\n        android:padding=\"10dp\">\r\n\r\n        <TextView\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"50dp\"\r\n            android:text=\"Enter Your Address Details\"\r\n            android:textSize=\"22sp\"\r\n            android:gravity=\"center\"\r\n            android:textColor=\"@color/darkBlue\"/>\r\n\r\n        <EditText\r\n            android:id=\"@+id/textHNo\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"40dp\"\r\n            android:layout_gravity=\"center\"\r\n            android:layout_margin=\"3dp\"\r\n            android:background=\"#050f29\"\r\n            android:gravity=\"center\"\r\n            android:hint=\"Apt or House No\"\r\n            android:padding=\"5dp\"\r\n            android:textColor=\"@android:color/white\"\r\n            android:textColorHint=\"@android:color/white\"\r\n            android:textSize=\"18sp\"\r\n            android:textStyle=\"bold\" />\r\n\r\n        <EditText\r\n            android:id=\"@+id/textBuilding\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"40dp\"\r\n            android:layout_gravity=\"center\"\r\n            android:layout_margin=\"3dp\"\r\n            android:background=\"@color/darkBlue\"\r\n            android:gravity=\"center\"\r\n            android:hint=\"Business or building name\"\r\n            android:padding=\"5dp\"\r\n            android:textColor=\"@android:color/white\"\r\n            android:textColorHint=\"@android:color/white\"\r\n            android:textSize=\"18sp\"\r\n            android:textStyle=\"bold\" />\r\n\r\n        <EditText\r\n            android:id=\"@+id/textStreet\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"40dp\"\r\n            android:layout_gravity=\"center\"\r\n            android:layout_margin=\"3dp\"\r\n            android:background=\"@color/darkBlue\"\r\n            android:gravity=\"center\"\r\n            android:hint=\"Street number and name\"\r\n            android:padding=\"5dp\"\r\n            android:textColor=\"@android:color/white\"\r\n            android:textColorHint=\"@android:color/white\"\r\n            android:textSize=\"18sp\"\r\n            android:textStyle=\"bold\" />\r\n\r\n        <EditText\r\n            android:id=\"@+id/textArea\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"40dp\"\r\n            android:layout_gravity=\"center\"\r\n            android:layout_margin=\"3dp\"\r\n            android:background=\"@color/darkBlue\"\r\n            android:gravity=\"center\"\r\n            android:hint=\"Area/District\"\r\n            android:padding=\"5dp\"\r\n            android:textColor=\"@android:color/white\"\r\n            android:textColorHint=\"@android:color/white\"\r\n            android:textSize=\"18sp\"\r\n            android:textStyle=\"bold\" />\r\n\r\n        <EditText\r\n            android:id=\"@+id/textLandmark\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"40dp\"\r\n            android:layout_gravity=\"center\"\r\n            android:layout_margin=\"3dp\"\r\n            android:background=\"@color/darkBlue\"\r\n            android:gravity=\"center\"\r\n            android:hint=\"Landmark\"\r\n            android:padding=\"5dp\"\r\n            android:textColor=\"@android:color/white\"\r\n            android:textColorHint=\"@android:color/white\"\r\n            android:textSize=\"18sp\"\r\n            android:textStyle=\"bold\" />\r\n\r\n        <androidx.appcompat.widget.AppCompatButton\r\n            android:id=\"@+id/buttonAdd\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_marginTop=\"15sp\"\r\n            android:background=\"@color/green\"\r\n            android:text=\"Save\"\r\n            android:textColor=\"@android:color/white\"\r\n            android:textSize=\"20dp\"\r\n            android:textStyle=\"bold\" />\r\n\r\n        <androidx.appcompat.widget.AppCompatButton\r\n            android:id=\"@+id/buttonCancel\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"50sp\"\r\n            android:layout_marginTop=\"5dp\"\r\n            android:background=\"@color/purple_500\"\r\n            android:text=\"Exit\"\r\n            android:textColor=\"@android:color/white\"\r\n            android:textSize=\"20dp\"\r\n            android:textStyle=\"bold\" />\r\n    </LinearLayout>\r\n</androidx.cardview.widget.CardView>
+===================================================================
+diff --git a/app/src/main/res/layout/alert_dialog_add_new_address.xml b/app/src/main/res/layout/alert_dialog_add_new_address.xml
+--- a/app/src/main/res/layout/alert_dialog_add_new_address.xml	
++++ b/app/src/main/res/layout/alert_dialog_add_new_address.xml	
+@@ -104,7 +104,7 @@
+             android:background="@color/green"
+             android:text="Save"
+             android:textColor="@android:color/white"
+-            android:textSize="20dp"
++            android:textSize="20sp"
+             android:textStyle="bold" />
+ 
+         <androidx.appcompat.widget.AppCompatButton
+@@ -112,10 +112,10 @@
+             android:layout_width="match_parent"
+             android:layout_height="50sp"
+             android:layout_marginTop="5dp"
+-            android:background="@color/purple_500"
++            android:background="@color/purple500"
+             android:text="Exit"
+             android:textColor="@android:color/white"
+-            android:textSize="20dp"
++            android:textSize="20sp"
+             android:textStyle="bold" />
+     </LinearLayout>
+ </androidx.cardview.widget.CardView>
+\ No newline at end of file
+Index: app/src/main/java/com/example/fooapp11/SavedAddresses.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.fooapp11;\r\n\r\nimport androidx.annotation.NonNull;\r\nimport androidx.appcompat.app.AppCompatActivity;\r\nimport androidx.recyclerview.widget.LinearLayoutManager;\r\nimport androidx.recyclerview.widget.RecyclerView;\r\n\r\nimport android.annotation.SuppressLint;\r\nimport android.app.Dialog;\r\nimport android.content.Context;\r\nimport android.graphics.Color;\r\nimport android.graphics.drawable.ColorDrawable;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.view.Window;\r\nimport android.widget.Button;\r\nimport android.widget.EditText;\r\nimport android.widget.Toast;\r\n\r\nimport com.example.fooapp11.adapters.DeliveryAdapter;\r\nimport com.example.fooapp11.model.DeliveryModel;\r\nimport com.google.firebase.database.DataSnapshot;\r\nimport com.google.firebase.database.DatabaseError;\r\nimport com.google.firebase.database.DatabaseReference;\r\nimport com.google.firebase.database.FirebaseDatabase;\r\nimport com.google.firebase.database.ValueEventListener;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.Date;\r\nimport java.util.Objects;\r\n\r\npublic class SavedAddresses extends AppCompatActivity {\r\n\r\n    DatabaseReference databaseReference;\r\n\r\n    RecyclerView recyclerView;\r\n    ArrayList<DeliveryModel> deliveryModelArrayList;\r\n    DeliveryAdapter adapter;\r\n\r\n    Button buttonAdd;\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_saved_addresses);\r\n\r\n        FirebaseDatabase.getInstance().setPersistenceEnabled(true); // work offline\r\n        Objects.requireNonNull(getSupportActionBar()).hide();\r\n\r\n        databaseReference = FirebaseDatabase.getInstance().getReference();\r\n\r\n        recyclerView = findViewById(R.id.recyclerView);\r\n        recyclerView.setHasFixedSize(true);\r\n        recyclerView.setLayoutManager(new LinearLayoutManager(this));\r\n\r\n        deliveryModelArrayList = new ArrayList<>();\r\n\r\n        buttonAdd = findViewById(R.id.buttonAdd);\r\n\r\n        buttonAdd.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                ViewDialogAdd viewDialogAdd = new ViewDialogAdd();\r\n                viewDialogAdd.showDialog(SavedAddresses.this);\r\n            }\r\n        });\r\n\r\n        readData();\r\n\r\n    }\r\n\r\n    private void readData() {\r\n\r\n        databaseReference.child(\"ADDRESSES\").orderByChild(\"HNo\").addValueEventListener(new ValueEventListener() {\r\n            @SuppressLint(\"NotifyDataSetChanged\")\r\n            @Override\r\n            public void onDataChange(@NonNull DataSnapshot snapshot) {\r\n                deliveryModelArrayList.clear();\r\n                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {\r\n                    DeliveryModel addresses = dataSnapshot.getValue(DeliveryModel.class);\r\n                    deliveryModelArrayList.add(addresses);\r\n                }\r\n                adapter = new DeliveryAdapter(SavedAddresses.this, deliveryModelArrayList);\r\n                recyclerView.setAdapter(adapter);\r\n                adapter.notifyDataSetChanged();\r\n            }\r\n\r\n            @Override\r\n            public void onCancelled(@NonNull DatabaseError error) {\r\n\r\n            }\r\n        });\r\n\r\n    }\r\n\r\n\r\n    public class ViewDialogAdd {\r\n        public void showDialog(Context context) {\r\n            final Dialog dialog = new Dialog(context);\r\n            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);\r\n            dialog.setCancelable(false);\r\n            dialog.setContentView(R.layout.alert_dialog_add_new_address);\r\n\r\n            EditText textHNo = dialog.findViewById(R.id.textHNo);\r\n            EditText textBuilding = dialog.findViewById(R.id.textBuilding);\r\n            EditText textStreet = dialog.findViewById(R.id.textStreet);\r\n            EditText textArea = dialog.findViewById(R.id.textArea);\r\n            EditText textLandmark = dialog.findViewById(R.id.textLandmark);\r\n\r\n            Button buttonAdd = dialog.findViewById(R.id.buttonAdd);\r\n            Button buttonCancel = dialog.findViewById(R.id.buttonCancel);\r\n\r\n            buttonAdd.setText(\"SAVE\");\r\n            buttonCancel.setOnClickListener(new View.OnClickListener() {\r\n                @Override\r\n                public void onClick(View view) {\r\n                    dialog.dismiss();\r\n                }\r\n            });\r\n\r\n            buttonAdd.setOnClickListener(new View.OnClickListener() {\r\n                @Override\r\n                public void onClick(View view) {\r\n                    String id = \"address\" + new Date().getTime();\r\n                    String HNo = textHNo.getText().toString();\r\n                    String building = textBuilding.getText().toString();\r\n                    String street = textStreet.getText().toString();\r\n                    String area = textArea.getText().toString();\r\n                    String landmark = textLandmark.getText().toString();\r\n\r\n                    if (HNo.isEmpty() || building.isEmpty() || street.isEmpty() || area.isEmpty() || landmark.isEmpty()) {\r\n                        Toast.makeText(context, \"Please Enter All data...\", Toast.LENGTH_SHORT).show();\r\n                    } else {\r\n                        databaseReference.child(\"ADDRESSES\").child(id).setValue(new DeliveryModel(id, HNo, building, street, area, landmark));\r\n                        Toast.makeText(context, \"DONE!\", Toast.LENGTH_SHORT).show();\r\n                        dialog.dismiss();\r\n                    }\r\n                }\r\n            });\r\n\r\n\r\n            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));\r\n            dialog.show();\r\n\r\n        }\r\n    }\r\n\r\n\r\n}
+===================================================================
+diff --git a/app/src/main/java/com/example/fooapp11/SavedAddresses.java b/app/src/main/java/com/example/fooapp11/SavedAddresses.java
+--- a/app/src/main/java/com/example/fooapp11/SavedAddresses.java	
++++ b/app/src/main/java/com/example/fooapp11/SavedAddresses.java	
+@@ -45,7 +45,9 @@
+         setContentView(R.layout.activity_saved_addresses);
+ 
+         FirebaseDatabase.getInstance().setPersistenceEnabled(true); // work offline
+-        Objects.requireNonNull(getSupportActionBar()).hide();
++
++        if (getSupportActionBar() != null)
++            getSupportActionBar().hide();
+ 
+         databaseReference = FirebaseDatabase.getInstance().getReference();
+ 
+Index: app/src/main/res/layout/activity_saved_addresses.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:orientation=\"vertical\"\r\n    tools:context=\".SavedAddresses\">\r\n\r\n    <TextView\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"50dp\"\r\n        android:text=\"Saved Addresses\"\r\n        android:background=\"@color/purple_500\"\r\n        android:textSize=\"23sp\"\r\n        android:gravity=\"center\"\r\n        android:textColor=\"#FFF\"/>\r\n\r\n    <androidx.recyclerview.widget.RecyclerView\r\n        android:id=\"@+id/recyclerView\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:layout_weight=\"1\"/>\r\n\r\n    <androidx.appcompat.widget.AppCompatButton\r\n        android:id=\"@+id/buttonAdd\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"50dp\"\r\n        android:background=\"@color/green\"\r\n        android:text=\"ADD NEW ADDRESS\"\r\n        android:textColor=\"@android:color/white\"\r\n        android:textStyle=\"bold\"/>\r\n\r\n</LinearLayout>
+===================================================================
+diff --git a/app/src/main/res/layout/activity_saved_addresses.xml b/app/src/main/res/layout/activity_saved_addresses.xml
+--- a/app/src/main/res/layout/activity_saved_addresses.xml	
++++ b/app/src/main/res/layout/activity_saved_addresses.xml	
+@@ -11,7 +11,7 @@
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:text="Saved Addresses"
+-        android:background="@color/purple_500"
++        android:background="@color/purple500"
+         android:textSize="23sp"
+         android:gravity="center"
+         android:textColor="#FFF"/>

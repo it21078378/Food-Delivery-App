@@ -1,0 +1,19 @@
+Index: app/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<resources>\r\n    <color name=\"green\">#2A8C2C</color>\r\n    <color name=\"purple_500\">#009900</color>\r\n    <color name=\"purple_700\">#FF3700B3</color>\r\n    <color name=\"teal_200\">#FF03DAC5</color>\r\n    <color name=\"teal_700\">#FF018786</color>\r\n    <color name=\"black\">#FF000000</color>\r\n    <color name=\"white\">#FFFFFFFF</color>\r\n    <color name=\"darkBlue\">#050f29</color>\r\n    <color name=\"darkBgFontColor\">#FFFFFFFF</color>\r\n    <color name=\"yellow\">#F5E642</color>\r\n\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/colors.xml b/app/src/main/res/values/colors.xml
+--- a/app/src/main/res/values/colors.xml	
++++ b/app/src/main/res/values/colors.xml	
+@@ -10,5 +10,7 @@
+     <color name="darkBlue">#050f29</color>
+     <color name="darkBgFontColor">#FFFFFFFF</color>
+     <color name="yellow">#F5E642</color>
++    <color name="purple500">#FF6200EE</color>
++
+ 
+ </resources>
+\ No newline at end of file

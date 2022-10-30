@@ -79,7 +79,7 @@ public class UnpaidCardDetails extends AppCompatActivity {
 
 
 
-        showPayment.setText("Total amount due RS."+String.valueOf(qty));
+        showPayment.setText("Total amount due RS."+String.valueOf(total));
         // qtyText.setText(String.valueOf(qty));
 
 
