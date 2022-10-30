@@ -12,7 +12,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.fooapp11.adapters.FoodAdapter;
+import com.example.fooapp11.adapters.CartAdapter;
+
 
 import com.example.fooapp11.model.Cart;
 
@@ -72,7 +73,7 @@ public class CartFragment extends Fragment {
                                 dataModalArrayList.add(dataModal);
                             }
                             // after that we are passing our array list to our adapter class.
-                            FoodAdapter adapter = new FoodAdapter(getContext(), dataModalArrayList);
+                            CartAdapter adapter = new CartAdapter(getContext(), dataModalArrayList);
 
                             // after passing this array list to our adapter
                             // class we are setting our adapter to our list view.

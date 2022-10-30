@@ -29,7 +29,7 @@ public class CardDetailsForm extends Activity {
     public static final String quantity="quantity";
     public TextView totalText, qtyText;
     private double total;
-    private int qty;
+    private String qty;
     private String name, description, img, uid;
 
     TextView showPayment;
@@ -65,6 +65,7 @@ public class CardDetailsForm extends Activity {
             public void onClick(View view) {
                 insertPaidData();
                 clearAll();
+                finish();
             }
         });
 
@@ -81,7 +82,7 @@ public class CardDetailsForm extends Activity {
 
         Intent i = getIntent();
         total = i.getDoubleExtra(Total, 0.0);
-        qty = i.getIntExtra(quantity, 0);
+        qty = i.getStringExtra(quantity);
         name = i.getStringExtra(Name);
         description = i.getStringExtra(Description);
         img = i.getStringExtra(Img);
@@ -90,7 +91,7 @@ public class CardDetailsForm extends Activity {
 
         showPayment.setText("Total amount due RS."+String.valueOf(total));
         // qtyText.setText(String.valueOf(qty));
-        cardNo.setText(name);
+        //cardNo.setText(name);
 
 
     }
@@ -105,7 +106,7 @@ public class CardDetailsForm extends Activity {
         map.put("name", name);
         map.put("description", description);
         map.put("img", img);
-        map.put("Uid", uid);
+        map.put("uid", uid);
 
 
         FirebaseDatabase.getInstance().getReference().child("paidDetails").push()
@@ -135,7 +136,7 @@ public class CardDetailsForm extends Activity {
         mapUp.put("name", name);
         mapUp.put("description", description);
         mapUp.put("img", img);
-        mapUp.put("Uid", uid);
+        mapUp.put("uid", uid);
 
 
         FirebaseDatabase.getInstance().getReference().child("unpaidDetails").push()

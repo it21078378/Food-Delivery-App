@@ -38,7 +38,7 @@ public class unpaid extends Fragment {
 
         FirebaseRecyclerOptions<UnpaidModel> option=
                 new FirebaseRecyclerOptions.Builder<UnpaidModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("unpaidDetails").orderByChild("Uid").startAt(uid).endAt(uid+"~"), UnpaidModel.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("unpaidDetails").orderByChild("uid").startAt(uid).endAt(uid+"~"), UnpaidModel.class)
                         .build();
 
         unpaidAdapter = new paymentUnpaidRV(option);

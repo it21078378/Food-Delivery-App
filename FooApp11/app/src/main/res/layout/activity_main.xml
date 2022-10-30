@@ -16,11 +16,12 @@
         />
 
     <LinearLayout
+
         android:layout_width="match_parent"
-        android:layout_height= "wrap_content"
-        android:layout_alignParentBottom= "true"
-        android:orientation="horizontal"
-        >
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnFragment1"
@@ -29,8 +30,7 @@
             android:layout_weight=".30"
             android:onClick="changeFragment"
             android:text="@string/home"
-            android:textSize="22sp"
-            />
+            android:textSize="22sp" />
 
         <Button
             android:id="@+id/btnFragment2"
@@ -39,8 +39,7 @@
             android:layout_weight=".30"
             android:onClick="changeFragment"
             android:text="@string/cart"
-            android:textSize="22sp"
-            />
+            android:textSize="22sp" />
 
         <Button
             android:id="@+id/btnFragment3"
@@ -49,9 +48,10 @@
             android:layout_weight=".40"
             android:onClick="changeFragment"
             android:text="@string/account"
-            android:textSize="22sp"
-            />
+            android:textSize="22sp" />
+
 
     </LinearLayout>
+
 
 </RelativeLayout>

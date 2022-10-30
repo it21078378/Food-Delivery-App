@@ -51,16 +51,16 @@ public class AddProduct extends AppCompatActivity {
                 if (TextUtils.isEmpty(imgUrl)) {
                     imgUrlEditText.setError("Please enter Product Image Url");
 
-                } 
-                
+                }
+
                 else if(TextUtils.isEmpty(productName)){
                     productNameEditText.setError("Please enter Product Name");
                 }
-                
+
                 else if(TextUtils.isEmpty(productDescription)){
-                productDescriptionEditText.setError("Please enter Product Name");
+                    productDescriptionEditText.setError("Please enter Product Name");
                 }
-                
+
                 else {
                     // calling method to add data to Firebase Firestore.
                     addDataToFirestore(productName, imgUrl, productDescription, amount);
