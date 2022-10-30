@@ -19,8 +19,6 @@ import android.widget.Toast;
 
 import com.example.fooapp11.adapters.DeliveryAdapter;
 import com.example.fooapp11.model.DeliveryModel;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -40,7 +38,6 @@ public class SavedAddresses extends AppCompatActivity {
     DeliveryAdapter adapter;
 
     Button buttonAdd;
-    String uId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,13 +45,9 @@ public class SavedAddresses extends AppCompatActivity {
         setContentView(R.layout.activity_saved_addresses);
 
         FirebaseDatabase.getInstance().setPersistenceEnabled(true); // work offline
-        if (getSupportActionBar() != null)
-            getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
-
-        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
-        uId = currentFirebaseUser.getUid();
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
@@ -78,7 +71,7 @@ public class SavedAddresses extends AppCompatActivity {
 
     private void readData() {
 
-        databaseReference.child("ADDRESSES").orderByChild("userId").startAt(uId).endAt(uId+"~").addValueEventListener(new ValueEventListener() {
+        databaseReference.child("ADDRESSES").orderByChild("HNo").addValueEventListener(new ValueEventListener() {
             @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -128,7 +121,6 @@ public class SavedAddresses extends AppCompatActivity {
             buttonAdd.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    String userId = uId;
                     String id = "address" + new Date().getTime();
                     String HNo = textHNo.getText().toString();
                     String building = textBuilding.getText().toString();
@@ -139,8 +131,8 @@ public class SavedAddresses extends AppCompatActivity {
                     if (HNo.isEmpty() || building.isEmpty() || street.isEmpty() || area.isEmpty() || landmark.isEmpty()) {
                         Toast.makeText(context, "Please Enter All data...", Toast.LENGTH_SHORT).show();
                     } else {
-                        databaseReference.child("ADDRESSES").child(id).setValue(new DeliveryModel(userId, id, HNo, building, street, area, landmark));
-                        Toast.makeText(context, "Address Added Successfully!", Toast.LENGTH_SHORT).show();
+                        databaseReference.child("ADDRESSES").child(id).setValue(new DeliveryModel(id, HNo, building, street, area, landmark));
+                        Toast.makeText(context, "DONE!", Toast.LENGTH_SHORT).show();
                         dialog.dismiss();
                     }
                 }
