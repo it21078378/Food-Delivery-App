@@ -2,18 +2,27 @@ package com.example.fooapp11.model;
 
 public class DeliveryModel {
 
-    String id, HNo, building, street, area, landmark;
+    String userId, id, HNo, building, street, area, landmark;
 
     public DeliveryModel() {
     }
 
-    public DeliveryModel(String id, String HNo, String building, String street, String area, String landmark) {
+    public DeliveryModel(String userId, String id, String HNo, String building, String street, String area, String landmark) {
+        this.userId=userId;
         this.id = id;
         this.HNo = HNo;
         this.building = building;
         this.street = street;
         this.area = area;
         this.landmark = landmark;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getId() {

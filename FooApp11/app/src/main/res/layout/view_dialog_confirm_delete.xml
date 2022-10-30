@@ -20,7 +20,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:padding="5dp"
-            android:text="Are you sure ?"
+            android:text="@string/textDeleteConf"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -31,9 +31,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="15sp"
-            android:background="@android:color/holo_red_light"
-            android:text="Yes, Delete"
-            android:textColor="@android:color/white"
+            android:background="@color/red2"
+            android:text="@string/BtnDeleteConfYes"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -42,9 +42,9 @@
             android:layout_width="match_parent"
             android:layout_height="50sp"
             android:layout_marginTop="5dp"
-            android:background="@color/purple_500"
-            android:text="No, Exit"
-            android:textColor="@android:color/white"
+            android:background="@color/red3"
+            android:text="@string/BtnDeleteConfNo"
+            android:textColor="@color/red2"
             android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>

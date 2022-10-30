@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:background="@color/darkBlue"
     android:padding="4sp"
-    android:layout_margin="4sp"
+    android:layout_margin="10sp"
     android:orientation="vertical"
     android:layout_height="wrap_content">
 
@@ -11,46 +11,46 @@
         android:id="@+id/textHNo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
+        android:text="@string/hintHNo"
+        android:textColor="@color/white"
         android:textSize="18sp"
-        android:text="Apt or House No"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textBuilding"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
-        android:textStyle="italic"
+        android:text="@string/hintBuilding"
+        android:textColor="@color/white"
         android:textSize="18sp"
-        android:text="Business or building name"/>
+        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/textStreet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
-        android:textStyle="italic"
+        android:text="@string/hintStreet"
+        android:textColor="@color/white"
         android:textSize="18sp"
-        android:text="Street number and name"/>
+        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/textArea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
-        android:textStyle="italic"
+        android:text="@string/hintArea"
+        android:textColor="@color/white"
         android:textSize="18sp"
-        android:text="Area/District"/>
+        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/textLandmark"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
-        android:textStyle="italic"
+        android:text="@string/hintLandmark"
+        android:textColor="@color/white"
         android:textSize="18sp"
-        android:text="Landmark"/>
+        android:textStyle="italic" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -63,21 +63,21 @@
             android:id="@+id/buttonDelete"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:layout_weight="1"
             android:layout_margin="3dp"
+            android:layout_weight="1"
             android:background="@color/green"
-            android:text="DELETE"
-            android:textColor="@android:color/white"/>
+            android:text="@string/BtnTextDelete"
+            android:textColor="@color/white" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonUpdate"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:layout_weight="1"
             android:layout_margin="3dp"
+            android:layout_weight="1"
             android:background="@color/green"
-            android:text="UPDATE"
-            android:textColor="@android:color/white"/>
+            android:text="@string/BtnTextUpdate"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 </LinearLayout>

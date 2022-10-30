@@ -11,28 +11,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="@color/darkBlue"
         android:padding="10dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="Enter Your Address Details"
-            android:textSize="22sp"
             android:gravity="center"
-            android:textColor="@color/darkBlue"/>
+            android:text="@string/textAddressDetails"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
 
         <EditText
             android:id="@+id/textHNo"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="3dp"
-            android:background="#050f29"
+            android:background="@drawable/rounded"
             android:gravity="center"
-            android:hint="Apt or House No"
+            android:hint="@string/hintHNo"
             android:padding="5dp"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -42,12 +43,12 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_margin="3dp"
-            android:background="@color/darkBlue"
+            android:background="@drawable/rounded"
             android:gravity="center"
-            android:hint="Business or building name"
+            android:hint="@string/hintBuilding"
             android:padding="5dp"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -57,12 +58,12 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_margin="3dp"
-            android:background="@color/darkBlue"
+            android:background="@drawable/rounded"
             android:gravity="center"
-            android:hint="Street number and name"
+            android:hint="@string/hintStreet"
             android:padding="5dp"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -72,12 +73,12 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_margin="3dp"
-            android:background="@color/darkBlue"
+            android:background="@drawable/rounded"
             android:gravity="center"
-            android:hint="Area/District"
+            android:hint="@string/hintArea"
             android:padding="5dp"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -87,12 +88,12 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_margin="3dp"
-            android:background="@color/darkBlue"
+            android:background="@drawable/rounded"
             android:gravity="center"
-            android:hint="Landmark"
+            android:hint="@string/hintLandmark"
             android:padding="5dp"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -102,9 +103,9 @@
             android:layout_height="match_parent"
             android:layout_marginTop="15sp"
             android:background="@color/green"
-            android:text="Save"
-            android:textColor="@android:color/white"
-            android:textSize="20dp"
+            android:text="@string/BtnTextAddAddress"
+            android:textColor="@color/white"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -112,10 +113,10 @@
             android:layout_width="match_parent"
             android:layout_height="50sp"
             android:layout_marginTop="5dp"
-            android:background="@color/purple_500"
-            android:text="Exit"
-            android:textColor="@android:color/white"
-            android:textSize="20dp"
+            android:background="@color/green2"
+            android:text="@string/BtnTextExitBtn"
+            android:textColor="@color/green"
+            android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

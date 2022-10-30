@@ -37,6 +37,7 @@ public class HomeFragment extends Fragment {
     private FirebaseAuth mAuth;
 
     Button add, review;
+    Button locations;
 
 
     @Override
@@ -50,11 +51,19 @@ public class HomeFragment extends Fragment {
         db = FirebaseFirestore.getInstance();
         loadDatainListview();
         review = (Button)contentView.findViewById(R.id.review);
+        locations = (Button)contentView.findViewById(R.id.locations);
 
         review.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getContext(), ReviewDetails.class));
+            }
+        });
+
+        locations.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), SavedAddresses.class));
             }
         });
 
