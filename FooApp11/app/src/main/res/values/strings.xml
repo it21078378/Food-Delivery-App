@@ -119,6 +119,7 @@
     <string name="cardDetailsHead">Credit or Debit Card</string>
     <string name="add_payment">Add Payment</string>
     <string name="buy">Buy</string>
+    <string name="paymentHistory">Payment History</string>
 
     <!--delivery -->
     <string name="hintHNo">Apt or House No</string>

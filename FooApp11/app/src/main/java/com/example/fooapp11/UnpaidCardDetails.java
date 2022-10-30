@@ -28,7 +28,7 @@ public class UnpaidCardDetails extends AppCompatActivity {
     public static final String quantity="quantity";
     public TextView totalText, qtyText;
     private double total;
-    private int qty;
+    private String qty;
     private String name, description, img, uid;
 
     TextView showPayment;
@@ -72,16 +72,15 @@ public class UnpaidCardDetails extends AppCompatActivity {
 
         Intent i = getIntent();
         total = i.getDoubleExtra(Total, 0.0);
-        qty = i.getIntExtra(quantity, 0);
+        qty = i.getStringExtra(quantity);
         name = i.getStringExtra(Name);
         description = i.getStringExtra(Description);
         img = i.getStringExtra(Img);
 
 
 
-        showPayment.setText("Total amount due RS."+String.valueOf(total));
+        showPayment.setText("Total amount due RS."+String.valueOf(qty));
         // qtyText.setText(String.valueOf(qty));
-        cardNo.setText(name);
 
 
     }
@@ -99,7 +98,7 @@ public class UnpaidCardDetails extends AppCompatActivity {
         map.put("name", name);
         map.put("description", description);
         map.put("img", img);
-        map.put("Uid", uid);
+        map.put("uid", uid);
 
 
         FirebaseDatabase.getInstance().getReference().child("paidDetails").push()

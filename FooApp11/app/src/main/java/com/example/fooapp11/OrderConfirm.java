@@ -17,13 +17,13 @@ public class OrderConfirm extends AppCompatActivity {
     private TextView nameText, descriptionText, priceText;
     private ImageView imgView;
 
-    private String name;
-    private String description;
-    private String img;
-    private double price;
+    String name;
+    String description;
+    String img;
+    double price;
 
     public double TCost;
-    public int Qty;
+    public String Qty;
 
     public static String Name;
     public static String Description;
@@ -66,6 +66,12 @@ public class OrderConfirm extends AppCompatActivity {
                 .circleCrop()
                 .error(com.google.android.gms.base.R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(imgView);
+
+        name = nameText.getText().toString();
+        description = descriptionText.getText().toString();
+        img = bundle.getString("imgUrl");
+        Qty = Quantity;
+
         display();
 
         nextActivity.setOnClickListener(new View.OnClickListener(){
@@ -104,7 +110,7 @@ public class OrderConfirm extends AppCompatActivity {
         i.putExtra(CardDetailsForm.Description, description);
         i.putExtra(CardDetailsForm.Img, img);
         i.putExtra(String.valueOf(CardDetailsForm.Total), tCost);
-        i.putExtra(String.valueOf(CardDetailsForm.quantity), Quantity);
+        i.putExtra(CardDetailsForm.quantity, Qty);
 
         startActivity(i);
     }
