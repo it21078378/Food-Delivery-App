@@ -51,7 +51,7 @@ public class RegisterActivity extends AppCompatActivity {
                     registerUser();
                 }
                 else{
-                    log.setText("Password mismatch");
+                    log.setText("Password Mismatch");
                 }
 
             }

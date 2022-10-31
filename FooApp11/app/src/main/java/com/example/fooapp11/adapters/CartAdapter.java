@@ -92,7 +92,7 @@ public class CartAdapter extends ArrayAdapter<Cart> {
                 int pamount= dataModal.getPamount();
                 String imgUrl= dataModal.getImgUrl();
                 String pdescription = dataModal.getPdescription();
-                int pquantity = dataModal.getPquantity();
+                int pquantity = 1;
 
                 //Create the bundle
                 Bundle bundle = new Bundle();
@@ -103,7 +103,7 @@ public class CartAdapter extends ArrayAdapter<Cart> {
                 bundle.putString("description", pdescription);
                 bundle.putString("imgUrl", imgUrl);
                 bundle.putString("description", pdescription);
-                bundle.putInt("quantity", pquantity);
+
 
                 //Add the bundle to the intent
                 intent.putExtras(bundle);
