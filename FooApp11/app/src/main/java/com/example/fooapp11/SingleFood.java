@@ -56,16 +56,16 @@ public class SingleFood extends AppCompatActivity {
 
         //Get the bundle
         Bundle bundle = getIntent().getExtras();
-
+        pquantity = 1;
         //Extract the data…
         ptitle = bundle.getString("title");
         pamount = bundle.getInt("amount");
         imgurl = bundle.getString("imgUrl");
         pdescription = bundle.getString("description");
-        pquantity = bundle.getInt("quantity");
         quantity.setText(String.valueOf(pquantity));
         title.setText(ptitle);
         description.setText(pdescription);
+        quantity.setText(String.valueOf(pquantity));
         amount.setText(String.valueOf(pamount));
         total.setText(String.valueOf(pquantity*pamount));
         Picasso.get().load(imgurl).into(image);
